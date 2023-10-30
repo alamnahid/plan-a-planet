@@ -22,6 +22,7 @@ const DashboardMain = () => {
                         <li><NavLink className="border-2 text-white font-bold hover:bg-gray-700" to='/dashboard'>Dashboard Home</NavLink></li>
                         <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-700" to='/dashboard/addproduct'>Add Product</NavLink></li>
                         <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-700" to='/dashboard/updateproduct'>Update Product</NavLink></li>
+                        <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-700" to='/dashboard/deleteproduct'>Delete Product</NavLink></li>
                        
                     </ul>
 

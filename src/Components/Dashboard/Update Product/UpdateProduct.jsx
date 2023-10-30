@@ -6,9 +6,9 @@ const UpdateProduct = () => {
     console.log(plantData)
     return (
         <div>
-            <h1>update producty</h1>
+            <h1 className="text-3xl text-center text-black font-semibold mt-16">Total {plantData.length} Product</h1>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
                 {
                     plantData?.map(item=><div key={item._id} className="flex flex-col text-black lg:flex-row border-2 border-gray-400 p-4 items-center gap-12">
                     <img className="w-[40vw] lg:w-[20vw]" src={item.photo} alt="" />
@@ -26,7 +26,7 @@ const UpdateProduct = () => {
 
                         <div className="flex gap-6">
                         
-                        <Link to={`/dashboard/updatesproduct/${item._id}`}><button className="btn btn-secondary mt-4 bg-[#FF6951] border-none w-[7rem] capitalize text-white text-lg">Update</button></Link>
+                        <Link to={`/dashboard/updatesproduct/${item._id}`}><button className="btn btn-secondary mt-4 bg-[#3b823fcf] border-none w-[7rem] capitalize text-white text-lg">Update</button></Link>
                         </div>
                     </div>
                 </div>)

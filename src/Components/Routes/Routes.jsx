@@ -5,6 +5,8 @@ import DashboardMain from "../Dashboard/DashboardMain";
 import AddProduct from "../Dashboard/Add Product/AddProduct";
 import UpdateProduct from "../Dashboard/Update Product/UpdateProduct";
 import Updates from "../Dashboard/Update Product/Updates";
+import DeleteProduct from "../Dashboard/Delete Product/DeleteProduct";
+import Delete from "../Dashboard/Delete Product/Delete";
 
 
 const router = createBrowserRouter([
@@ -37,7 +39,12 @@ const router = createBrowserRouter([
             path: 'updatesproduct/:id',
             element: <Updates></Updates>,
             loader: ({params})=>fetch(`http://localhost:5000/plants/${params.id}`)
-          }
+          },
+          {
+            path: 'deleteproduct',
+            element: <DeleteProduct></DeleteProduct>,
+            loader: ()=>fetch('http://localhost:5000/plants')
+          },
         ]
        
         
