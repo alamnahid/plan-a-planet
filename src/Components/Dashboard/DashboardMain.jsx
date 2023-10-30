@@ -9,9 +9,9 @@ const DashboardMain = () => {
             <div className="drawer bg-[#F0F5F0] lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle bg-[#F0F5F0]" />
                 <div className="drawer-content bg-[#F0F5F0] flex flex-col items-center justify-center">
-                    <Outlet></Outlet>
+                    
                     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open Dashboard</label>
-
+                    <Outlet></Outlet>
 
 
                 </div>
