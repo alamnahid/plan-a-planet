@@ -4,6 +4,7 @@ import Home from "../Home/Home";
 import DashboardMain from "../Dashboard/DashboardMain";
 import AddProduct from "../Dashboard/Add Product/AddProduct";
 import UpdateProduct from "../Dashboard/Update Product/UpdateProduct";
+import Updates from "../Dashboard/Update Product/Updates";
 
 
 const router = createBrowserRouter([
@@ -29,7 +30,13 @@ const router = createBrowserRouter([
           },
           {
             path: 'updateproduct',
-            element: <UpdateProduct></UpdateProduct>
+            element: <UpdateProduct></UpdateProduct>,
+            loader: ()=>fetch('http://localhost:5000/plants')
+          },
+          {
+            path: 'updatesproduct/:id',
+            element: <Updates></Updates>,
+            loader: ({params})=>fetch(`http://localhost:5000/plants/${params.id}`)
           }
         ]
        
