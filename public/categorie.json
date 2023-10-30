@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "BONSAI",
+        "image": "https://i.ibb.co/ZK0v7Pb/Rectangle-51.png"
+      },
+      {
+        "id": 2,
+        "name": "CACTUS",
+        "image": "https://i.ibb.co/7VQkYkB/Rectangle-51-1.png"
+      },
+      {
+        "id": 3,
+        "name": "CREEPERS",
+        "image": "https://i.ibb.co/HG4Rb3s/Rectangle-51-2.png"
+      },
+      {
+        "id": 4,
+        "name": "Succulents",
+        "image": "https://i.ibb.co/jJspKry/Rectangle-51-3.png"
+      },
+      {
+        "id": 5,
+        "name": "seeds",
+        "image": "https://i.ibb.co/LSWMng4/Rectangle-51-4.png"
+      },
+      {
+        "id": 6,
+        "name": "gifting",
+        "image": "https://i.ibb.co/6tdSph1/Rectangle-51-5.png"
+      }
+]
