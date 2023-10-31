@@ -7,6 +7,9 @@ import UpdateProduct from "../Dashboard/Update Product/UpdateProduct";
 import Updates from "../Dashboard/Update Product/Updates";
 import DeleteProduct from "../Dashboard/Delete Product/DeleteProduct";
 import Delete from "../Dashboard/Delete Product/Delete";
+import Shop from "../Shop/Shop";
+import ProductDetails from "../Product Details/ProductDetails";
+import SemiCategorieShop from "../Shop/SemiCategorie Shop/SemiCategorieShop";
 
 
 const router = createBrowserRouter([
@@ -17,7 +20,23 @@ const router = createBrowserRouter([
         {
           path: '/',
           element: <Home></Home>
-        }
+        },
+        {
+          path: '/shop',
+          element: <Shop></Shop>,
+          loader: ()=>fetch('http://localhost:5000/plants')
+        },
+        {
+          path: '/productdetails/:id',
+          element: <ProductDetails></ProductDetails>,
+          loader: ({params}) =>fetch(`http://localhost:5000/plants/${params.id}`)
+        },
+        {
+          path: '/semishop/:name',
+          element: <SemiCategorieShop></SemiCategorieShop>,
+          loader: ()=>fetch('http://localhost:5000/plants')
+          
+        },
       ]
     },
 

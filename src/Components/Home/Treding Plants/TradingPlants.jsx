@@ -9,7 +9,7 @@ const TradingPlants = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 mt-8 justify-items-center items-center gap-8 lg:grid-cols-3 xl:grid-cols-4">
 
-            <div className="w-[18rem] px-5 pt-5 pb-4 h-[26rem] rounded-2xl bg-white">
+                <div className="w-[18rem] px-5 pt-5 pb-4 h-[26rem] rounded-2xl bg-white">
                     <img src="https://i.ibb.co/J7B3Zgf/Frame-61-2.png" alt="" />
 
                     <h1 className="text-[#343434] font-semibold mt-3 text-xl">Nahid Alam</h1>
@@ -21,7 +21,7 @@ const TradingPlants = () => {
 
                 </div>
             </div>
-            
+
         </div>
     );
 };
