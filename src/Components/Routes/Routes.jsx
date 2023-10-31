@@ -10,6 +10,7 @@ import Delete from "../Dashboard/Delete Product/Delete";
 import Shop from "../Shop/Shop";
 import ProductDetails from "../Product Details/ProductDetails";
 import SemiCategorieShop from "../Shop/SemiCategorie Shop/SemiCategorieShop";
+import CategorieShop from "../Shop/Categorie Shop/CategorieShop";
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
           loader: ()=>fetch('http://localhost:5000/plants')
           
         },
+        {
+          path: '/categorieshop/:name',
+          element: <CategorieShop></CategorieShop>,
+          loader: ()=>fetch('http://localhost:5000/plants')
+        }
       ]
     },
 

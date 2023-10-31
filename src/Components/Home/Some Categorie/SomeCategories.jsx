@@ -10,7 +10,7 @@ const SomeCategories = () => {
         .then(data=>setCategorie(data))
     }, [])
     return (
-        <div className="px-28 mt-16 flex justify-between flex-wrap">
+        <div className="px-[10%] mt-16 flex justify-between flex-wrap">
            {
             categorie?.map(categories=><Link to={`/semishop/${categories.name}`} key={categories.id}> <div className="flex flex-col justify-center items-center">
                 <img className="w-[11.25rem] h-[11.25rem] transform scale-100 transition-transform duration-300 hover:scale-110" src={categories.image} alt="" />

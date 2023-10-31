@@ -63,8 +63,8 @@ const AddProduct = () => {
 
                             <option value="Indoor Plants">Indoor Plants</option>
                             <option value="Air Purifying Plants">Air Purifying Plants</option>
-                            <option value="Flowering Plants">Flowering Plants</option>
-                            <option value="Others">Others</option>
+                            <option value="Flower Plants">Flowering Plants</option>
+                            
 
                         </select>
                     </div>
@@ -79,7 +79,7 @@ const AddProduct = () => {
                             <option value="Succulents">Succulents</option>
                             <option value="Seeds">Seeds</option>
                             <option value="Gifting">Gifting</option>
-                            <option value="Others">Others</option>
+                           
                         </select>
                     </div>
 
