@@ -1,19 +1,44 @@
-
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.shopcontainer{
-    background-image: url(https://i.ibb.co/jVV80Qd/Background.png), linear-gradient(rgb(43, 119, 57), rgb(64, 178, 60));
+.shopcontainer {
+  background-image: url(https://i.ibb.co/jVV80Qd/Background.png), linear-gradient(rgb(43, 119, 57), rgb(64, 178, 60));
 
 }
+
 .swiper-container {
-    width: 750px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+  width: 750px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  width: 300px;
+}
+
+.blogfirst {
+  background-image: url(https://i.ibb.co/0jdw0N4/Blog-Card-1-1.png), linear-gradient(rgba(24, 25, 24, 0.507), rgba(32, 35, 32, 0.41));
+  background-repeat: no-repeat;
+  background-size: 47vw;
+  background-position: center;
+  background-blend-mode: overlay;
+  border-radius: 20px;
+}
+.blogsecond {
+  background-image: url(https://i.ibb.co/bXZd9rM/Blog-Card-2.png), linear-gradient(rgba(24, 25, 24, 0.507), rgba(32, 35, 32, 0.41));
+  background-repeat: no-repeat;
+  background-size: 47vw;
+  background-position: center;
+  background-blend-mode: overlay;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .blogfirst{
+    background-size: 100vw;
   }
-  .swiper-slide{
-    width: 300px;
+  .blogsecond {
+    background-size: 100vw;
   }
+}

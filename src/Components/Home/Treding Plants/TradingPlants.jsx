@@ -12,10 +12,10 @@ const TradingPlants = () => {
     }, [])
     return (
         <div className="mt-28">
-            <h1 className="text-[#343434] text-5xl font-bold text-center pb-8 border-b-2 border-green-800 rounded-xl w-fit mx-auto ">Trending Plants</h1>
+            <h1 className="text-[#343434] text-4xl font-bold text-center pb-8 border-b-2 border-green-800 rounded-xl w-fit mx-auto ">Trending Plants</h1>
 
 
-            <div className="grid grid-cols-1 md:grid-cols-2 mt-8 justify-items-center items-center gap-8 lg:grid-cols-3 xl:grid-cols-4 mx-[10%]">
+            <div className="grid grid-cols-1 md:grid-cols-2 mt-8 justify-items-center items-center gap-8 lg:grid-cols-3 xl:grid-cols-5 mx-[10%]">
 
                 {
                     product?.map(item=><div key={item._id} className="w-[18rem] px-5 pt-5 pb-4 h-[24rem] rounded-2xl bg-white">
