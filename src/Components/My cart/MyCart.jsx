@@ -12,6 +12,15 @@ const MyCart = () => {
     console.log(user?.email)
 
     const [cartloaderData, setcartLoaderData] = useState([])
+    let totalPrice = 0;
+    cartloaderData.forEach((item)=>{
+        const itemprice = parseFloat(item.price);
+        if(!isNaN(itemprice)){
+            totalPrice+=itemprice
+        }
+    })
+    console.log(totalPrice)
+    console.log(cartloaderData[0].price)
 
     const url = `http://localhost:5000/cart?email=${user?.email}`
     
@@ -62,12 +71,12 @@ const MyCart = () => {
           })
     }
     return (
-        <div className="mt-16">
+        <div className="mt-16 mx-[10%]">
             <h1 className="text-[#343434] text-4xl font-bold text-center pb-8 border-b-2 border-green-800 rounded-xl w-fit mx-auto ">Your Cart Items</h1>
 
             <div>
 
-                <div className="overflow-x-auto mx-[10%] mt-16">
+                <div className="overflow-x-auto mt-16">
                     <table className="table">
                         {/* head */}
                         <thead>
@@ -104,7 +113,7 @@ const MyCart = () => {
                                     </td>
                                     <td className="text-xl text-[#343434]">10</td>
                                     <td className="text-xl text-[#343434]">$ 999</td>
-                                    <td className="text-xl text-[#343434]">$ 999</td>
+                                    <td className="text-xl text-[#343434]">$ {item.price}</td>
                                     
                                     <th>
                                         <Link><button className="btn btn-ghost btn-xs text-xl text-green-700 ">details</button></Link>
@@ -121,8 +130,36 @@ const MyCart = () => {
                     </table>
                 </div>
 
+                
 
             </div>
+
+            <div className="bg-[#F0F5F0] w-full h-[40vh] pr-20 mt-16">
+
+                <div className="w-[30rem] bg-[#F0F5F0] float-right">
+                    <div className="flex justify-between items-center">
+                        <p className="text-[#343434] text-xl">Subtotal</p>
+                        <p className="text-[#343434] text-xl">$ {totalPrice}</p>
+                    </div>
+
+                    <div className="flex mt-6 mb-6 justify-between items-center">
+                        <p className="text-[#343434] text-xl">Shipping</p>
+                        <p className="text-[#343434] text-xl">$ 10.00</p>
+                    </div>
+
+                    <hr />
+
+                    <div className="flex mt-6 justify-between items-center">
+                        <p className="text-[#343434] text-xl font-bold">Total</p>
+                        <p className="text-[#343434] text-xl font-bold ">$ {totalPrice+10}</p>
+                    </div>
+
+                </div>
+
+
+                </div>
+
+            
 
         </div>
     );

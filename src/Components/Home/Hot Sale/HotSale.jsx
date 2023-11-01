@@ -11,32 +11,32 @@ const HotSale = () => {
             .then(data => setProduct(data))
     }, [])
 
-    console.log(product)
+    // console.log(product)
     return (
         <div className="mt-28 mx-[10%]">
-             <h1 className="text-[#343434] text-4xl font-bold text-center pb-8 border-b-2 border-green-800 rounded-xl w-fit mx-auto ">Hot Sale</h1>
+            <h1 className="text-[#343434] text-4xl font-bold text-center pb-8 border-b-2 border-green-800 rounded-xl w-fit mx-auto ">Hot Sale</h1>
 
-             <div className="grid grid-cols-1 md:grid-cols-2 mt-8 justify-items-center items-center gap-8 lg:grid-cols-3 xl:grid-cols-5 mx-[10%]">
+            <div className="grid grid-cols-1 md:grid-cols-2 mt-8 justify-items-center items-center gap-8 lg:grid-cols-3 xl:grid-cols-5">
 
                 {
-                    product?.filter(item=>item?.hotsale==='hotsale').slice(0, 10).map(item => <div key={item._id} className="w-[18rem] px-5 pt-5 pb-4 h-[24rem] rounded-2xl bg-white">
+                    product?.filter(item => item?.hotsale === 'hotsale').slice(0, 10).map(item => <div key={item._id} className="w-[18rem] px-5 pt-5 pb-4 h-[24rem] rounded-2xl bg-white">
                         <div className="relative">
-                        <img className="h-[12rem] w-[16rem] rounded-xl mx-auto" src={item?.photo} alt="" />
-                        <div className="absolute top-2 right-4">
+                            <img className="h-[12rem] w-[16rem] rounded-xl mx-auto" src={item?.photo} alt="" />
+                            <div className="absolute top-2 right-4">
 
-                        <div className="relative">
-                            <img src={discount} alt="" />
-                            <h2 className="text-white text-[0.75rem] font-semibold absolute top-3 left-4">25%<br />Off</h2>
-                        </div>
+                                <div className="relative">
+                                    <img src={discount} alt="" />
+                                    <h2 className="text-white text-[0.75rem] font-semibold absolute top-3 left-4">25%<br />Off</h2>
+                                </div>
 
 
-                        </div>
+                            </div>
                         </div>
 
                         <h1 className="text-[#343434] font-semibold mt-3 text-xl">{item?.name}</h1>
                         <div className="flex gap-2 items-center">
-                        <h1 className="text-[#343434] text-xl">$ {item?.price}</h1>
-                        <h1 className="text-[#D11F1F]  text-xl">$ <del>{item?.price}</del></h1>
+                            <h1 className="text-[#343434] text-xl">$ {item?.price}</h1>
+                            <h1 className="text-[#D11F1F]  text-xl">$ <del>{item?.price}</del></h1>
                         </div>
 
 

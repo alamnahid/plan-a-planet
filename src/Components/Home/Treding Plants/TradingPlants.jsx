@@ -18,7 +18,7 @@ const TradingPlants = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 mt-8 justify-items-center items-center gap-8 lg:grid-cols-3 xl:grid-cols-5 mx-[10%]">
 
                 {
-                    product?.slice(0, 10).map(item => <div key={item._id} className="w-[18rem] px-5 pt-5 pb-4 h-[24rem] rounded-2xl bg-white">
+                    product?.filter(item=>item.hotsale!=='hotsale').slice(0, 10).map(item => <div key={item._id} className="w-[18rem] px-5 pt-5 pb-4 h-[24rem] rounded-2xl bg-white">
                         <img className="h-[12rem] w-[16rem] rounded-xl mx-auto" src={item?.photo} alt="" />
 
                         <h1 className="text-[#343434] font-semibold mt-3 text-xl">{item?.name}</h1>
@@ -33,7 +33,7 @@ const TradingPlants = () => {
             </div>
 
             <div className="text-center mt-12">
-                <Link to={`/shop`}><button className="capitalize h-14 w-[25rem] bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop All</button></Link>
+                <Link to={`/shop`}><button className="capitalize h-14 w-[18rem] lg:w-[25rem] bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop All</button></Link>
             </div>
 
         </div>

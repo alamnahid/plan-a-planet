@@ -5,7 +5,7 @@ import ShopBanner from "./ShopBanner";
 
 const Shop = () => {
     const plantsloaderData = useLoaderData();
-    const [showData, setShowData] = useState(plantsloaderData.slice(0, 10))
+    const [showData, setShowData] = useState(plantsloaderData.slice(0, 8))
 
     const [categorie, setCategorie] = useState([])
     const [semicategorie, setSemiCategorie] = useState([])
@@ -52,7 +52,7 @@ const Shop = () => {
                 <div className="w-[15.5rem] h-fit p-6 border-2 border-[#E3E5E5] bg-[#F0F5F0] ml-24 mt-24">
 
                     <div className="btn-group btn-group-vertical w-full border-b-2 pb-5 rounded-xl border-[#3B823E]">
-                        <button onClick={()=>setShowData(plantsloaderData)} className="btn btn-outline border-green-900 mt-4 w-full text-white font-semibold bg-[#3B823E]">All Categories</button>
+                        <button onClick={() => setShowData(plantsloaderData)} className="btn btn-outline border-green-900 mt-4 w-full text-white font-semibold bg-[#3B823E]">All Categories</button>
 
                         {
                             semicategorie?.map(btn => <button onClick={() => handlesemicategoriClick(btn.name)} key={btn.id} className="btn btn-outline border-green-900 mt-4 w-full text-black font-semibold">{btn.name}</button>)
@@ -66,11 +66,11 @@ const Shop = () => {
                 </div>
 
                 <div>
-                    <div className="ml-24 mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-end items-center gap-6">
+                    <div className="ml-24 mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  justify-items-center lg:justify-items-end items-center gap-6">
 
 
                         {
-                            showData?.map(plant => <div key={plant._id} className="w-[18rem] px-5 pt-5 pb-4 h-[24rem] rounded-2xl bg-white">
+                            showData?.map(plant => <div key={plant._id} className="w-[18rem] cardss px-5 pt-5 pb-4 h-[24rem] rounded-2xl bg-white">
                                 <img className="h-[12rem] w-[16rem] rounded-xl mx-auto" src={plant?.photo} alt="" />
 
                                 <h1 className="text-[#343434] font-semibold mt-3 text-xl">{plant?.name}</h1>
@@ -81,18 +81,18 @@ const Shop = () => {
 
 
                     </div>
-                    {!showAll && showData.length > 10 && (
-                <div className="mx-auto text-center mt-16">
-                    <button
-                        onClick={handleShowAll}
-                        className="capitalize h-16 w-full lg:w-[24rem] bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Show All</button>
-                </div>
-            )}
+                    {!showAll && showData.length > 7 && (
+                        <div className="mx-auto w-[24rem]  text-center mt-16">
+                            <button
+                                onClick={handleShowAll}
+                                className="capitalize ml-5 lg:ml-0 h-16 w-full lg:w-[24rem] bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Show All</button>
+                        </div>
+                    )}
                 </div>
 
             </div>
 
-            
+
 
         </div>
     );

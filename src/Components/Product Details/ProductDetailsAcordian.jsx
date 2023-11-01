@@ -1,10 +1,10 @@
-
+import plant from "../../assets/images/anime-plant.gif"
 
 const ProductDetailsAcordian = () => {
     return (
-        <div>
-            <div className="w-full h-[36rem] text-black shopcontainer mt-16 ">
-                <div className="collapse collapse-plus bg-[#F0F5F0]">
+        <div className="flex flex-col-reverse lg:flex-row shopcontainer mt-28 justify-evenly items-center lg:gap-12">
+            <div className="lg:w-[50vw] lg:pt-20 h-[36rem] text-black  mt-16 ">
+                <div className="collapse collapse-plus bg-[#f0f5f098]">
                     <input type="radio" name="my-accordion-3" checked="checked" />
                     <div className="collapse-title text-xl font-medium">
                         Weekly Watering
@@ -13,7 +13,7 @@ const ProductDetailsAcordian = () => {
                         <p>Calatheas enjoy weekly waterings, allowing the top 2’ of soil to dry out partially. In winter, we recommend watering less frequently to prevent overwatering and root rot. This plant is not very drought tolerant, and extended periods of dryness will cause leaf edges to brown.</p>
                     </div>
                 </div>
-                <div className="collapse collapse-plus bg-[#F0F5F0]">
+                <div className="collapse mt-8 collapse-plus bg-[#f0f5f098]">
                     <input type="radio" name="my-accordion-3" />
                     <div className="collapse-title text-xl font-medium">
                         Light Requirements
@@ -22,7 +22,7 @@ const ProductDetailsAcordian = () => {
                         <p>Calatheas thrive in medium, indirect sunlight but tolerate lower light levels too. Bright direct sunlight can cause the stunning colours on their leaves to fade, with prolonged exposure likely to burn and scorch their leaves.</p>
                     </div>
                 </div>
-                <div className="collapse collapse-plus bg-[#F0F5F0]">
+                <div className="collapse mt-8 collapse-plus bg-[#f0f5f098]">
                     <input type="radio" name="my-accordion-3" />
                     <div className="collapse-title text-xl font-medium">
                         Humidity
@@ -32,6 +32,10 @@ const ProductDetailsAcordian = () => {
                     </div>
                 </div>
 
+            </div>
+
+            <div>
+                <img className="rounded-lg" src={plant} alt="" />
             </div>
             
         </div>
