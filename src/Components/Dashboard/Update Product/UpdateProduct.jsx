@@ -22,6 +22,9 @@ const UpdateProduct = () => {
                         <ul className="space-y-3 mt-3">
                             
                             <li className=" list-none text-xl font-medium ">Type: <span className="">{item.producttype}</span></li>
+                            {
+                                item.hotsale && <li className=" list-none text-red-950 text-2xl font-medium ">Item: <span className="">{item.hotsale}</span></li>
+                            }
                         </ul>
 
                         <div className="flex gap-6">

@@ -1,11 +1,22 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 // import cart from "../../../assets/icon/cart.svg"
 import logo from "../../../assets/logo/logo.png"
 // import { IconButton } from "@mui/material";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import SearchIcon from '@mui/icons-material/Search';
+import { useContext } from "react";
+import { AuthContext } from "../../AuthContest/AuthProvider";
+// import SearchIcon from '@mui/icons-material/Search';
 
 const Navbar = () => {
+    const {user, logOut} = useContext(AuthContext) 
+    const handdleLogout = ()=>{
+        logOut()
+        .then()
+        .catch()
+      }
+      
+
+
     return (
         <div>
             <div className="w-full h-10 px-2 lg:px-0 bg-[#01370C] relative">
@@ -44,12 +55,19 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     <div className="flex gap-5 items-center">
-                        <h4 className="text-green-900 font-bold text-lg hover:underline cursor-pointer">Login</h4>
+                        {
+                            user? <Link onClick={handdleLogout} to='/login'><h4 className="text-green-900 font-bold text-lg hover:underline cursor-pointer">Log out</h4></Link>
+                            :
+                            <Link to='/login'><h4 className="text-green-900 font-bold text-lg hover:underline cursor-pointer">Login</h4></Link>
+                        }
 
                         <div className="dropdown dropdown-end ">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className=" w-[2rem] rounded-full">
-                            <img className="w-[2rem]" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            {
+                                user?.photoURL && <img className="w-[2rem]" src={user.photoURL} />
+                            }
+                            
                         </div>
                     </label>
                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
