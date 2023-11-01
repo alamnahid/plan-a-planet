@@ -24,7 +24,7 @@ const Navbar = () => {
                 <h1 className="text-white text-[0.7rem] lg:text-[0.9rem] lg:text-center pt-2">Use code FIRST50 for a 50% discount on your first order!</h1>
 
                 {/* <img className="float-right cursor-pointer absolute right-52 top-2" src={cart} alt="" /> */}
-                <AddShoppingCartIcon className="float-right cursor-pointer absolute right-20 lg:right-32 top-2" />
+                <Link to="/cart"><AddShoppingCartIcon className="float-right cursor-pointer absolute right-20 lg:right-32 top-2" /></Link>
 
 
                 

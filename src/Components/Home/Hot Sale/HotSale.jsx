@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import discount from "../../../assets/images/discount.svg"
 
 const HotSale = () => {
     const [product, setProduct] = useState([])
@@ -19,7 +20,18 @@ const HotSale = () => {
 
                 {
                     product?.filter(item=>item?.hotsale==='hotsale').slice(0, 10).map(item => <div key={item._id} className="w-[18rem] px-5 pt-5 pb-4 h-[24rem] rounded-2xl bg-white">
+                        <div className="relative">
                         <img className="h-[12rem] w-[16rem] rounded-xl mx-auto" src={item?.photo} alt="" />
+                        <div className="absolute top-2 right-4">
+
+                        <div className="relative">
+                            <img src={discount} alt="" />
+                            <h2 className="text-white text-[0.75rem] font-semibold absolute top-3 left-4">25%<br />Off</h2>
+                        </div>
+
+
+                        </div>
+                        </div>
 
                         <h1 className="text-[#343434] font-semibold mt-3 text-xl">{item?.name}</h1>
                         <div className="flex gap-2 items-center">

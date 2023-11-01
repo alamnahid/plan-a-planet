@@ -32,7 +32,7 @@ const Login = () => {
                 'Logged in successfully',
                 'success'
               )
-              navigate(location?.state?location.state : '/')
+            //   navigate(location?.state?location.state : '/')
           })
           .catch((error) => {
             console.error(error)

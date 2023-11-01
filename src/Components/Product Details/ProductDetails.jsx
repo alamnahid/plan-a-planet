@@ -1,11 +1,15 @@
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import ProductDetailsAcordian from "./ProductDetailsAcordian";
+import Swal from "sweetalert2";
+import { AuthContext } from "../AuthContest/AuthProvider";
 
 
 
 const ProductDetails = () => {
+    const {user} = useContext(AuthContext)
+    
     const [quantity, setQuantity] = useState(0);
     if (quantity < 0) {
         setQuantity(0)
@@ -13,7 +17,37 @@ const ProductDetails = () => {
 
     const plantdata = useLoaderData();
     console.log(plantdata)
-    console.log(quantity)
+
+    const {category, name, photo, price} = plantdata;
+    const email = user?.email;
+    console.log(email)
+     const productInfo = {name, category, photo, price, quantity, email}
+
+    // console.log(quantity)
+
+    const handleaddToCart = ()=>{
+        fetch('http://localhost:5000/cart',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(productInfo)
+        })
+        .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                
+                if(data.insertedId){
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product Added cart Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                      })
+                }
+            })
+
+    }
 
 
     
@@ -29,7 +63,16 @@ const ProductDetails = () => {
 
                 <div>
                     <h1 className="text-[2rem] text-[#343434] font-bold">{plantdata?.name}</h1>
-                    <p className="text-[2rem] text-[#343434]">$ {plantdata?.price}</p>
+                    <div>
+                        {
+                            plantdata?.hotsale ? <div className="flex gap-3 items-center">
+                                <p className="text-[2rem] text-[#343434]">$ {plantdata?.price}</p>
+                                <p className="text-[2rem] text-[#ff0000]">$ <del>{plantdata?.price}</del></p>
+                            </div>
+                            :
+                            <p className="text-[2rem] text-[#343434]">$ {plantdata?.price}</p>
+                        }
+                    </div>
                     <p className="text-gray-500 w-[40rem] mb-7">{plantdata?.description}</p>
 
                     <div className="flex justify-between items-center">
@@ -53,7 +96,7 @@ const ProductDetails = () => {
                             </select>
                         </div>
                     </div>
-                    <Link><button className="capitalize h-16 w-[22rem] bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-6 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Add to Cart</button></Link>
+                    <Link><button onClick={handleaddToCart} className="capitalize h-16 w-[22rem] bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-6 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Add to Cart</button></Link>
                 </div>
 
             </div>

@@ -14,6 +14,7 @@ import CategorieShop from "../Shop/Categorie Shop/CategorieShop";
 import Login from "../Login Signup/Login";
 import Signup from "../Login Signup/Signup";
 import AddHotSaleProduct from "../Dashboard/Add Hot Sale Product/AddHotSaleProduct";
+import MyCart from "../My cart/MyCart";
 
 
 const router = createBrowserRouter([
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
         {
           path: '/signup',
           element: <Signup></Signup>
+        },
+        {
+          path: '/cart',
+          element: <MyCart></MyCart>
         }
       ]
     },
