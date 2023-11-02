@@ -19,7 +19,7 @@ const DashboardMain = () => {
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay "></label>
                     <ul className="menu p-4 w-80 min-h-full text-base-content rounded-xl bg-[#3b823fcf]">
                         {/* Sidebar content here */}
-                        <li><NavLink className="border-2 text-white font-bold hover:bg-gray-700" to='/dashboard'>Dashboard Home</NavLink></li>
+                        <li><NavLink className="border-2 text-white font-bold hover:bg-gray-700" to='/dashboard/dashboardhome'>Dashboard Home</NavLink></li>
                         <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-700" to='/dashboard/addproduct'>Add Product</NavLink></li>
                         <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-700" to='/dashboard/hotsale'>Add Hote Sale Product</NavLink></li>
                         <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-700" to='/dashboard/updateproduct'>Update Product</NavLink></li>
@@ -29,6 +29,8 @@ const DashboardMain = () => {
 
                 </div>
             </div>
+
+            
 
         </div>
     );

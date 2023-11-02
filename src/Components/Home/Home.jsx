@@ -4,6 +4,7 @@ import CoverHome from "./CoverHome/CoverHome";
 import Gallery from "./Gallery/Gallery";
 import Gardenning from "./Gardenning/Gardenning";
 import HotSale from "./Hot Sale/HotSale";
+import Review from "./Review/Review";
 import SomeCategories from "./Some Categorie/SomeCategories";
 import TradingPlants from "./Treding Plants/TradingPlants";
 
@@ -19,6 +20,7 @@ const Home = () => {
             <HotSale></HotSale>
             <Gardenning></Gardenning>
             <Gallery></Gallery>
+            <Review></Review>
             
         </div>
     );

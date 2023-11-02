@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import ShopBanner from "../ShopBanner";
+import HotSale from "../../Home/Hot Sale/HotSale";
 
 
 const SemiCategorieShop = () => {
@@ -73,7 +74,7 @@ const SemiCategorieShop = () => {
 
             </div>
 
-
+                            <HotSale></HotSale>
 
         </div>
     );

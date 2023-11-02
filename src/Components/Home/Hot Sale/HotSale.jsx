@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import discount from "../../../assets/images/discount.svg"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const HotSale = () => {
     const [product, setProduct] = useState([])
@@ -11,6 +13,11 @@ const HotSale = () => {
             .then(data => setProduct(data))
     }, [])
 
+    useEffect(() => {
+        // Initialize AOS
+        AOS.init();
+      }, []);
+
     // console.log(product)
     return (
         <div className="mt-28 mx-[10%]">
@@ -19,7 +26,7 @@ const HotSale = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 mt-8 justify-items-center items-center gap-8 lg:grid-cols-3 xl:grid-cols-5">
 
                 {
-                    product?.filter(item => item?.hotsale === 'hotsale').slice(0, 10).map(item => <div key={item._id} className="w-[18rem] px-5 pt-5 pb-4 h-[24rem] rounded-2xl bg-white">
+                    product?.filter(item => item?.hotsale === 'hotsale').slice(0, 10).map(item => <div data-aos="fade-down" data-aos-delay="200" key={item._id} className="w-[18rem] px-5 pt-5 pb-4 h-[24rem] rounded-2xl bg-white">
                         <div className="relative">
                             <img className="h-[12rem] w-[16rem] rounded-xl mx-auto" src={item?.photo} alt="" />
                             <div className="absolute top-2 right-4">

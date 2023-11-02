@@ -15,12 +15,17 @@ import Login from "../Login Signup/Login";
 import Signup from "../Login Signup/Signup";
 import AddHotSaleProduct from "../Dashboard/Add Hot Sale Product/AddHotSaleProduct";
 import MyCart from "../My cart/MyCart";
+import DashboardHome from "../Dashboard/Dashboard home/DashboardHome";
+import About from "../About/About";
+import Contact from "../Contact/Contact";
+import ErrorElement from "../Error Page/ErrorElement";
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <ErrorElement></ErrorElement>,
       children: [
         {
           path: '/',
@@ -30,6 +35,14 @@ const router = createBrowserRouter([
           path: '/shop',
           element: <Shop></Shop>,
           loader: ()=>fetch('http://localhost:5000/plants')
+        },
+        {
+            path: '/about',
+            element: <About></About>
+        },
+        {
+            path: '/contact',
+            element: <Contact></Contact>
         },
         {
           path: '/productdetails/:id',
@@ -66,10 +79,16 @@ const router = createBrowserRouter([
       
         path: 'dashboard',
         element: <DashboardMain></DashboardMain>,
+        errorElement: <ErrorElement></ErrorElement>,
         children: [
           {
             path: 'addproduct',
             element: <AddProduct></AddProduct>
+          },
+          {
+            path: 'dashboardhome',
+            element: <DashboardHome></DashboardHome>,
+            loader: ()=>fetch('http://localhost:5000/plants')
           },
           {
             path: 'hotsale',
