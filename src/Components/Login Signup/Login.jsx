@@ -28,11 +28,11 @@ const Login = () => {
         .then((result) => {
             console.log(result.user)
             Swal.fire(
-                'Good job!',
+                'Welcome!',
                 'Logged in successfully',
                 'success'
               )
-            //   navigate(location?.state?location.state : '/')
+              navigate(location?.state?location.state : '/')
           })
           .catch((error) => {
             console.error(error)
@@ -44,6 +44,36 @@ const Login = () => {
               })
           });
 
+    }
+
+    const handleGoogleLogin = ()=>{
+        googleSignIn()
+        .then(result=>{
+            navigate(location?.state ? location.state : '/')
+            Swal.fire(
+                'Welcome!',
+                'Successfully Logged In',
+                'success'
+              )
+        })
+        .catch(error=>{console.log(error)})
+    }
+
+    const handleFacebookLogin = ()=>{
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Facebook Login Not available right now! Use google or email password',
+            footer: '<a href="">Why do I have this issue?</a>'
+          })
+    }
+    const handleLinkedinogin = ()=>{
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Facebook Login Not available right now! Use google or email password',
+            footer: '<a href="">Why do I have this issue?</a>'
+          })
     }
     return (
         <div>
@@ -84,13 +114,13 @@ const Login = () => {
                         <p className="text-center text-[#444444] text-lg font-medium mt-7">Or Sign in with</p>
 
                         <div className="flex gap-4 items-center justify-center mt-7">
-                            <div className="w-[3.5rem] cursor-pointer h-[3.5rem] flex justify-center items-center bg-[#F5F5F8] rounded-[50%]">
+                            <div onClick={handleFacebookLogin} className="w-[3.5rem] cursor-pointer h-[3.5rem] flex justify-center items-center bg-[#F5F5F8] rounded-[50%]">
                                 <img src={facebook} alt="" />
                             </div>
-                            <div className="w-[3.5rem] cursor-pointer h-[3.5rem] flex justify-center items-center bg-[#F5F5F8] rounded-[50%]">
+                            <div onClick={handleLinkedinogin} className="w-[3.5rem] cursor-pointer h-[3.5rem] flex justify-center items-center bg-[#F5F5F8] rounded-[50%]">
                                 <img src={linkedin} alt="" />
                             </div>
-                            <div className="w-[3.5rem] cursor-pointer h-[3.5rem] flex justify-center items-center bg-[#F5F5F8] rounded-[50%]">
+                            <div onClick={handleGoogleLogin} className="w-[3.5rem] cursor-pointer h-[3.5rem] flex justify-center items-center bg-[#F5F5F8] rounded-[50%]">
                                 <img src={google} alt="" />
                             </div>
                         </div>

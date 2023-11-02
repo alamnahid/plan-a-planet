@@ -6,11 +6,11 @@ import HotSale from "../../Home/Hot Sale/HotSale";
 
 const SemiCategorieShop = () => {
     const plantsloaderData = useLoaderData();
-    const [showData, setShowData] = useState(plantsloaderData.slice(0, 10))
+    const [showData, setShowData] = useState(plantsloaderData)
     const { name } = useParams()
-    console.log(name.toLowerCase())
-    console.log(plantsloaderData)
-    console.log(plantsloaderData[4].producttype.toLowerCase())
+    // console.log(name.toLowerCase())
+    // console.log(plantsloaderData)
+    // console.log(plantsloaderData[4].producttype.toLowerCase())
 
     useEffect(() => {
         const filterbycategorie = plantsloaderData.filter(plants => plants.producttype.toLowerCase() === name.toLowerCase())
@@ -18,16 +18,16 @@ const SemiCategorieShop = () => {
     }, [name, plantsloaderData])
 
 
-    const [showAll, setShowAll] = useState(false);
+    // const [showAll, setShowAll] = useState(false);
 
 
 
 
-    const handleShowAll = () => {
-        setShowData(plantsloaderData)
+    // const handleShowAll = () => {
+    //     setShowData(plantsloaderData)
 
-        setShowAll(true);
-    };
+    //     setShowAll(true);
+    // };
     return (
         <div>
             <ShopBanner></ShopBanner>
@@ -54,22 +54,22 @@ const SemiCategorieShop = () => {
 
                                 {
                                     showData?.map(plant => <div key={plant._id} className="w-[18rem] px-5 pt-5 pb-4 h-[26rem] rounded-2xl bg-white">
-                                        <img src="https://i.ibb.co/J7B3Zgf/Frame-61-2.png" alt="" />
+                                        <img className="w-[15.1rem] h-[11rem] rounded-md" src={plant?.photo} alt="" />
 
-                                        <h1 className="text-[#343434] font-semibold mt-3 text-xl">Nahid Alam</h1>
-                                        <h1 className="text-[#343434] text-xl">$ 350</h1>
+                                        <h1 className="text-[#343434] font-semibold mt-3 text-xl">{plant?.name}</h1>
+                                        <h1 className="text-[#343434] text-xl">$ {plant?.price}</h1>
                                         <Link to={`/productdetails/${plant._id}`}><button className="capitalize h-16 w-full bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop Now</button></Link>
                                     </div>)
                                 }
                             </div>
                     }
-                    {!showAll && showData.length > 10 && (
+                    {/* {!showAll && showData.length > 10 && (
                         <div className="mx-auto text-center mt-16">
                             <button
                                 onClick={handleShowAll}
                                 className="capitalize h-16 w-full lg:w-[24rem] bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Show All</button>
                         </div>
-                    )}
+                    )} */}
                 </div>
 
             </div>

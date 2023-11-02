@@ -21,16 +21,10 @@ const MyCart = () => {
             totalPrice += itemprice
         }
     })
-    // console.log(totalPrice)
-    // console.log(cartloaderData[0].price)
 
     const url = `http://localhost:5000/cart?email=${user?.email}`
 
-    // useEffect(()=>{
-    //     fetch(url, {credentials: 'include'})
-    //     .then(res=>res.json())
-    //     .then(data=>)
-    // },[url])
+
 
     useEffect(() => {
         axios.get(url, { withCredentials: true })

@@ -19,6 +19,7 @@ import DashboardHome from "../Dashboard/Dashboard home/DashboardHome";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
 import ErrorElement from "../Error Page/ErrorElement";
+import PrivateRoute from "../Root/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -70,7 +71,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/cart',
-          element: <MyCart></MyCart>
+          element: <PrivateRoute><MyCart></MyCart></PrivateRoute>
         }
       ]
     },

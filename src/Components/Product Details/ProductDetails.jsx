@@ -17,11 +17,10 @@ const ProductDetails = () => {
     }
 
     const plantdata = useLoaderData();
-    console.log(plantdata)
 
     const {category, name, photo, price} = plantdata;
     const email = user?.email;
-    console.log(email)
+   
      const productInfo = {name, category, photo, price, quantity, email}
 
     // console.log(quantity)

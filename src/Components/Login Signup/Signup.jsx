@@ -36,17 +36,46 @@ const Signup = () => {
         })
 
     }
+    const handleGoogleLogin = ()=>{
+        googleSignIn()
+        .then(result=>{
+            navigate(location?.state ? location.state : '/')
+            Swal.fire(
+                'Welcome!',
+                'Successfully Logged In',
+                'success'
+              )
+        })
+        .catch(error=>{console.log(error)})
+    }
+
+    const handleFacebookLogin = ()=>{
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Facebook Login Not available right now! Use google or email password',
+            footer: '<a href="">Why do I have this issue?</a>'
+          })
+    }
+    const handleLinkedinogin = ()=>{
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Facebook Login Not available right now! Use google or email password',
+            footer: '<a href="">Why do I have this issue?</a>'
+          })
+    }
     return (
         <div>
             <div className="">
 
             </div>
 
-            <div className="flex bg-white flex-col-reverse lg:flex-row justify-center items-center my-20 gap-16 p-3 lg:p-0">
+            <div className="flex  flex-col-reverse lg:flex-row justify-center items-center my-20 gap-16 p-3 lg:p-0">
                 <div>
                     <img className="rounded-xl" src="https://i.ibb.co/L8SG9vr/hr-Mdhw3fl-V.gif" alt="" />
                 </div>
-                <div className="w-full p-3 lg:p-0 lg:w-[38rem] h-[57.5rem] rounded-xl border-2 border-[#D0D0D0]">
+                <div className="w-full bg-white p-3 lg:p-0 lg:w-[38rem] h-[57.5rem] rounded-xl border-2 border-[#D0D0D0]">
 
                     <h1 className="text-[#444444] text-[2.5rem] font-semibold text-center mt-[4.6rem]">Sign Up</h1>
 
@@ -79,13 +108,13 @@ const Signup = () => {
                         <p className="text-center text-[#444444] text-lg font-medium mt-7">Or Sign Up with</p>
 
                         <div className="flex gap-4 items-center justify-center mt-7">
-                            <div className="w-[3.5rem] h-[3.5rem] cursor-pointer flex justify-center items-center bg-[#F5F5F8] rounded-[50%]">
+                            <div onClick={handleFacebookLogin} className="w-[3.5rem] h-[3.5rem] cursor-pointer flex justify-center items-center bg-[#F5F5F8] rounded-[50%]">
                                 <img src={facebook} alt="" />
                             </div>
-                            <div className="w-[3.5rem] h-[3.5rem] cursor-pointer flex justify-center items-center bg-[#F5F5F8] rounded-[50%]">
+                            <div onClick={handleLinkedinogin} className="w-[3.5rem] h-[3.5rem] cursor-pointer flex justify-center items-center bg-[#F5F5F8] rounded-[50%]">
                                 <img src={linkedin} alt="" />
                             </div>
-                            <div className="w-[3.5rem] cursor-pointer h-[3.5rem] flex justify-center items-center bg-[#F5F5F8] rounded-[50%]">
+                            <div onClick={handleGoogleLogin} className="w-[3.5rem] cursor-pointer h-[3.5rem] flex justify-center items-center bg-[#F5F5F8] rounded-[50%]">
                                 <img src={google} alt="" />
                             </div>
                         </div>
