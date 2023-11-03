@@ -10,14 +10,17 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import Swal from "sweetalert2";
 import axios from "axios";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../AuthContest/AuthProvider";
 
 const Login = () => {
     const location = useLocation()
     const navigate = useNavigate()
+    // const [userlogin, setUserLogin] = useState({})
+    // const {user} = useContext(AuthContext)
 
-    const {signIn, googleSignIn} = useContext(AuthContext);
+    const {signIn, googleSignIn, user} = useContext(AuthContext);
+    
     const handleSignin = (e)=>{
         e.preventDefault()
         const email = e.target.email.value;
@@ -26,7 +29,7 @@ const Login = () => {
         
         signIn(email,password)
         .then((result) => {
-            console.log(result.user)
+            // console.log(result.user)
             Swal.fire(
                 'Welcome!',
                 'Logged in successfully',
@@ -49,6 +52,7 @@ const Login = () => {
     const handleGoogleLogin = ()=>{
         googleSignIn()
         .then(result=>{
+            console.log(result)
             navigate(location?.state ? location.state : '/')
             Swal.fire(
                 'Welcome!',
@@ -75,6 +79,9 @@ const Login = () => {
             footer: '<a href="">Why do I have this issue?</a>'
           })
     }
+
+
+
     return (
         <div>
             <div className="lg:pb-32">

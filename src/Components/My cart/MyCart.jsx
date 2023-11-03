@@ -75,8 +75,13 @@ const MyCart = () => {
         const email = e.target.email.value;
         const number = e.target.number.value;
         const address = e.target.address.value;
+        const coupon = e.target.coupon.value;
 
-        const orderInfo = {name, email, number, address}
+        if(coupon === 'FIRST50'){
+            totalPrice = totalPrice/2;
+        }
+
+        const orderInfo = {name, email, number, address, coupon, totalPrice}
 
         fetch('http://localhost:5000/order',{
             method: 'POST',
@@ -211,6 +216,10 @@ const MyCart = () => {
 
                             <div className=" mt-9">
                                 <TextField id="outlined-basic" className="w-full" name="number" label="Your Phone Number" variant="outlined" required />
+                            </div>
+
+                            <div className=" mt-9">
+                                <TextField id="outlined-basic" className="w-full" name="coupon" label="Your Coupon" variant="outlined" />
                             </div>
 
                             <div className="mt-9">

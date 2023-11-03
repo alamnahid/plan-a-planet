@@ -11,60 +11,80 @@ import { useContext } from "react";
 import { AuthContext } from "../AuthContest/AuthProvider";
 
 const Signup = () => {
-    const {createUser, googleSignIn} = useContext(AuthContext);
+    const { createUser, googleSignIn, handleUpdateProfile, user } = useContext(AuthContext);
     const location = useLocation()
     const navigate = useNavigate()
 
-    const handleSignUp = (e)=>{
+    const handleSignUp = (e) => {
         e.preventDefault();
         const name = e.target.name.value
         const email = e.target.email.value;
         const password = e.target.password.value;
-        
+
         createUser(email, password)
-        .then(result=>{
-            console.log(result.user)
-            Swal.fire(
-                'Good job!',
-                'Successfully Logged In',
-                'success'
-              )
-              navigate(location?.state ? location?.state : '/')
+            .then(result => {
+                handleUpdateProfile(name)
+                Swal.fire(
+                    'Good job!',
+                    'Successfully Logged In',
+                    'success'
+                )
+                navigate(location?.state ? location?.state : '/')
+            })
+            .catch(error => {
+                console.log(error)
+            })
+
+        const userInfo = { name, email }
+        fetch('http://localhost:5000/user', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(userInfo)
         })
-        .catch(error=>{
-            console.log(error)
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+
+            })
+
 
     }
-    const handleGoogleLogin = ()=>{
+    const handleGoogleLogin = () => {
         googleSignIn()
-        .then(result=>{
-            navigate(location?.state ? location.state : '/')
-            Swal.fire(
-                'Welcome!',
-                'Successfully Logged In',
-                'success'
-              )
-        })
-        .catch(error=>{console.log(error)})
+            .then(result => {
+                navigate(location?.state ? location.state : '/')
+                Swal.fire(
+                    'Welcome!',
+                    'Successfully Logged In',
+                    'success'
+                )
+            })
+            .catch(error => { console.log(error) })
     }
 
-    const handleFacebookLogin = ()=>{
+    const handleFacebookLogin = () => {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Facebook Login Not available right now! Use google or email password',
             footer: '<a href="">Why do I have this issue?</a>'
-          })
+        })
     }
-    const handleLinkedinogin = ()=>{
+    const handleLinkedinogin = () => {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Facebook Login Not available right now! Use google or email password',
             footer: '<a href="">Why do I have this issue?</a>'
-          })
+        })
     }
+
+
+
+
+
     return (
         <div>
             <div className="">
@@ -88,22 +108,22 @@ const Signup = () => {
                         </div>
 
                         <p className="mt-[2.1rem] text-[#444444] lg:ml-[4.69rem] text-lg font-semibold">Email</p>
-                      
+
                         <div className="rounded-2xl text-black mt-5 lg:mx-[4.69rem]">
-                        <TextField className="w-full text-black lg:w-[28.8rem]   h-[3.75rem] rounded-2xl border-2 border-[#000000] outline-none placeholder:text-[#000000] pl-5 " id="outlined-basic" label="Your Email" name="email" variant="outlined" type="email" required />
+                            <TextField className="w-full text-black lg:w-[28.8rem]   h-[3.75rem] rounded-2xl border-2 border-[#000000] outline-none placeholder:text-[#000000] pl-5 " id="outlined-basic" label="Your Email" name="email" variant="outlined" type="email" required />
 
                         </div>
 
                         <p className="mt-[2.1rem] text-[#444444] lg:ml-[4.69rem] text-lg font-semibold">Password</p>
-                      
-                      <div className="rounded-2xl text-black mt-5 lg:mx-[4.69rem]">
-                      <TextField className="w-full text-black lg:w-[28.8rem]   h-[3.75rem] rounded-2xl border-2 border-[#000000] outline-none placeholder:text-[#000000] pl-5 " id="outlined-basic" label="Your Pasword" name="password" variant="outlined" type="password" required />
 
-                      </div>
-                      
+                        <div className="rounded-2xl text-black mt-5 lg:mx-[4.69rem]">
+                            <TextField className="w-full text-black lg:w-[28.8rem]   h-[3.75rem] rounded-2xl border-2 border-[#000000] outline-none placeholder:text-[#000000] pl-5 " id="outlined-basic" label="Your Pasword" name="password" variant="outlined" type="password" required />
+
+                        </div>
 
 
-                      <input className="w-full lg:w-[28.8rem] mt-7 lg:mx-[4.69rem] h-[4rem] rounded-xl border-2 btn bg-[#3B823E] border-none hover:bg-white hover:text-black hover:border-2 hover:border-[#3B823E] text-white text-xl btn-secondary font-semibold capitalize " type="submit" value="Sign up" />
+
+                        <input className="w-full lg:w-[28.8rem] mt-7 lg:mx-[4.69rem] h-[4rem] rounded-xl border-2 btn bg-[#3B823E] border-none hover:bg-white hover:text-black hover:border-2 hover:border-[#3B823E] text-white text-xl btn-secondary font-semibold capitalize " type="submit" value="Sign up" />
 
                         <p className="text-center text-[#444444] text-lg font-medium mt-7">Or Sign Up with</p>
 

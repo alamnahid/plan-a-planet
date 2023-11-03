@@ -19,15 +19,15 @@ const Gallery = () => {
             <h1 className="text-[#343434] text-4xl font-bold text-center pb-8 border-b-2 border-green-800 rounded-xl w-fit mx-auto ">Celebs You Love, Love Us</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center">
-                <img data-aos="fade-up" data-aos-delay="200" className="gallery cursor-grabbing" src={cel1} alt="" />
-                <img data-aos="fade-up" data-aos-delay="200" className="gallery cursor-grabbing" src={cel2} alt="" />
-                <img data-aos="fade-up" data-aos-delay="200" className="gallery cursor-grabbing" src={cel3} alt="" />
-                <img data-aos="fade-up" data-aos-delay="200" className="gallery cursor-grabbing" src={cel4} alt="" />
+                <img data-aos="fade-up" data-aos-delay="200" className="gallery" src={cel1} alt="" />
+                <img data-aos="fade-up" data-aos-delay="200" className="gallery" src={cel2} alt="" />
+                <img data-aos="fade-up" data-aos-delay="200" className="gallery" src={cel3} alt="" />
+                <img data-aos="fade-up" data-aos-delay="200" className="gallery" src={cel4} alt="" />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center">
-                <img data-aos="fade-down" data-aos-delay="200" className="gallery cursor-grabbing" src={cel5} alt="" />
-                <img data-aos="fade-down" data-aos-delay="200" className="gallery cursor-grabbing" src={cel6} alt="" />
-                <img data-aos="fade-down" data-aos-delay="200" className="gallery cursor-grabbing" src={cel7} alt="" />
+                <img data-aos="fade-down" data-aos-delay="200" className="gallery" src={cel5} alt="" />
+                <img data-aos="fade-down" data-aos-delay="200" className="gallery" src={cel6} alt="" />
+                <img data-aos="fade-down" data-aos-delay="200" className="gallery" src={cel7} alt="" />
                 
             </div>
             

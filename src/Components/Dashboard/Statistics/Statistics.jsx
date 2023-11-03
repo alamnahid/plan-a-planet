@@ -49,7 +49,7 @@ const Statistics = ({allplants}) => {
 
 
     const data = [
-        { name: 'Total Income Amount', value: totalPrice },
+        { name: 'Total Income Amount', value: 3500 },
         { name: 'Total Plants Price', value: allplantstotalprice },
       ];
       
