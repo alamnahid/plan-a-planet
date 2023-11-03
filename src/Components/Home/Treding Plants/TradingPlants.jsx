@@ -8,7 +8,7 @@ const TradingPlants = () => {
     const [product, setProduct] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/plants')
+        fetch('https://plan-a-plant-server-lf1d65ppi-nahid-alams-projects.vercel.app/plants')
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
