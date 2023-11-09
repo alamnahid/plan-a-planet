@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from "react-router-dom";
 
 const Blog = () => {
 
@@ -20,7 +21,7 @@ const Blog = () => {
                         Low Maintenance Plants <br />
                         For a Busy Home</h1>
                     <div className="text-center mt-6">
-                        <button className="capitalize h-14 lg:w-[20vw] bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Read Blog</button>
+                        <Link to='/blogs'><button className="capitalize h-14 lg:w-[20vw] bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Read Blog</button></Link>
                     </div>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="200" className="w-full h-[18rem] blogsecond flex flex-col justify-center items-center">
@@ -28,7 +29,7 @@ const Blog = () => {
                         You Should Take Home
                         Today</h1>
                     <div className="text-center mt-6">
-                        <button className="capitalize h-14 lg:w-[20vw] bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Read Blog</button>
+                    <Link to='/blogs'><button className="capitalize h-14 lg:w-[20vw] bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Read Blog</button></Link>
                     </div>
                 </div>
             </div>

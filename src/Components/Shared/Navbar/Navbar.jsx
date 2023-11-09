@@ -18,20 +18,20 @@ const Navbar = () => {
 
 
     return (
-        <div>
-            <div className="w-full h-10 px-2 lg:px-0 bg-[#01370C] relative">
+        <div className="">
+            {/* <div className="w-full h-10 px-2 lg:px-0 bg-[#01370C] ">
 
                 <h1 className="text-white text-[0.7rem] lg:text-[0.9rem] lg:text-center pt-2">Use code FIRST50 for a 50% discount on your first order!</h1>
 
-                {/* <img className="float-right cursor-pointer absolute right-52 top-2" src={cart} alt="" /> */}
+                <img className="float-right cursor-pointer absolute right-52 top-2" src={cart} alt="" />
                 <Link to="/cart"><AddShoppingCartIcon className="float-right cursor-pointer absolute right-20 lg:right-32 top-2" /></Link>
 
 
                 
 
-            </div>
+            </div> */}
 
-            <div className="navbar lg:px-[7rem] ">
+            <div className="navbar lg:px-[7rem] fixed z-50 bg-white">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost text-black lg:hidden">
@@ -54,6 +54,7 @@ const Navbar = () => {
                         <li><NavLink className="text-[#343434] font-semibold text-base" to='/cart'>My Cart</NavLink></li>
                         <li><NavLink className="text-[#343434] font-semibold text-base" to='/dashboard/dashboardhome'>Dashboard</NavLink></li>
                         <li><NavLink className="text-[#343434] font-semibold text-base" to='/contact'>Contact</NavLink></li>
+                        <li><NavLink className="text-[#343434] font-semibold text-base" to='/blogs'>Blogs</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end">

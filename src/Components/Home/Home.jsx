@@ -1,6 +1,7 @@
 import BestSelling from "./Best Selling/BestSelling";
 import Blog from "./Blog/Blog";
 import CoverHome from "./CoverHome/CoverHome";
+import Faq from "./FAQ/FAQ";
 import Gallery from "./Gallery/Gallery";
 import Gardenning from "./Gardenning/Gardenning";
 import HotSale from "./Hot Sale/HotSale";
@@ -21,6 +22,7 @@ const Home = () => {
             <Gardenning></Gardenning>
             <Gallery></Gallery>
             <Review></Review>
+            <Faq></Faq>
             
         </div>
     );
