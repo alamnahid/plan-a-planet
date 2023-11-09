@@ -138,7 +138,7 @@ const MyCart = () => {
     }
     return (
         <div className="pt-32 mx-[10%]">
-            <h1 className="text-[#343434] text-4xl font-bold text-center pb-8 border-b-2 border-green-800 rounded-xl w-fit mx-auto ">Your Cart Items</h1>
+            <h1 className="text-[#343434] text-2xl md:text-4xl font-bold text-center pb-2 md:pb-8 border-b-2 border-green-800 rounded-xl w-fit mx-auto ">Your Cart Items</h1>
 
             <div>
 
@@ -147,12 +147,12 @@ const MyCart = () => {
                         {/* head */}
                         <thead>
                             <tr>
-                                <th className="text-[#343434] text-xl font-semibold">Delete</th>
-                                <th className="text-[#343434] text-xl font-semibold">Product Details</th>
-                                <th className="text-[#343434] text-xl font-semibold">Quantity</th>
-                                <th className="text-[#343434] text-xl font-semibold">Price</th>
-                                <th className="text-[#343434] text-xl font-semibold">Total</th>
-                                <th className="text-[#343434] text-xl font-semibold"></th>
+                                <th className="text-[#343434] text-xs md:text-xl font-semibold">Delete</th>
+                                <th className="text-[#343434] text-xs md:text-xl font-semibold">Product Details</th>
+                                <th className="text-[#343434] text-xs md:text-xl font-semibold">Quantity</th>
+                                <th className="text-[#343434] text-xs md:text-xl font-semibold">Price</th>
+                                <th className="text-[#343434] text-xs md:text-xl font-semibold">Total</th>
+                                <th className="text-[#343434] text-xs md:text-xl font-semibold"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -167,19 +167,19 @@ const MyCart = () => {
                                     <td>
                                         <div className="flex items-center space-x-3">
                                             <div className="avatar">
-                                                <div className="mask mask-squircle h-[7.5rem] w-[10rem]">
-                                                    <img className="h-[7.5rem] w-[10rem]" src={item?.photo} alt="Avatar Tailwind CSS Component" />
+                                                <div className="mask mask-squircle h-[4rem] lg:h-[7.5rem] w-[3rem] lg:w-[10rem]">
+                                                    <img className="h-[4rem] lg:h-[7.5rem]  w-[3rem] md:w-[10rem]" src={item?.photo} alt="Avatar Tailwind CSS Component" />
                                                 </div>
                                             </div>
                                             <div>
-                                                <div className="font-bold text-2xl text-[#343434]">{item?.name}</div>
-                                                <div className="text-sm opacity-50 text-[#343434]">{item?.category}</div>
+                                                <div className="font-bold text-xs md:text-2xl text-[#343434]">{item?.name}</div>
+                                                <div className="text-xs md:text-sm opacity-50 text-[#343434]">{item?.category}</div>
                                             </div>
                                         </div>
                                     </td>
-                                    <td className="text-xl text-[#343434]">{item?.quantity}</td>
-                                    <td className="text-xl text-[#343434]">$ {item?.price}</td>
-                                    <td className="text-xl text-[#343434]">$ {item?.price * item?.quantity}</td>
+                                    <td className="text-xs md:text-xl text-[#343434]">{item?.quantity}</td>
+                                    <td className="text-xs md:text-xl text-[#343434]">$ {item?.price}</td>
+                                    <td className="text-xs md:text-xl text-[#343434]">$ {item?.price * item?.quantity}</td>
 
                                     
                                 </tr>)
@@ -198,9 +198,9 @@ const MyCart = () => {
 
             </div>
 
-            <div className="bg-[#F0F5F0] w-full h-[20vh] pr-20 mt-16">
+            <div className="bg-[#F0F5F0] w-full h-[20vh] md:pr-20 mt-16">
 
-                <div className="w-[30rem] bg-[#F0F5F0] float-right">
+                <div className="w-[20rem] md:w-[30rem] bg-[#F0F5F0] float-right">
                     <div className="flex justify-between items-center">
                         <p className="text-[#343434] text-xl">Subtotal</p>
                         <p className="text-[#343434] text-xl">$ {totalPrice}</p>
@@ -223,8 +223,8 @@ const MyCart = () => {
 
             </div>
 
-            <form className="w-full h-[45vh]" onSubmit={handleSubmit}>
-                <div className="w-[35rem] pr-8 float-right">
+            <form className="w-full h-[55vh]" onSubmit={handleSubmit}>
+                <div className="w-[20rem] md:w-[35rem] md:pr-8 float-right">
 
                     <h1 className="mt-6 text-[#343434] text-2xl font-bold">Billing Details</h1>
 
