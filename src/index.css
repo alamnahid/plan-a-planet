@@ -35,7 +35,6 @@
 }
 .gallery:hover{
   transform: rotate(20deg);
-  transition: 1s;
 }
 .cardss:hover{
   transform: rotate(2deg);

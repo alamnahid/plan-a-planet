@@ -12,15 +12,36 @@ const MyCart = () => {
     // console.log(user)
     const navigate = useNavigate();
 
+    const [itemname, setItemName] = useState('')
+    const [itemPrice, setItemPrice] = useState(0)
+    const [quantityofitem, setQuantity] = useState(0)
+
+
 
     const [cartloaderData, setcartLoaderData] = useState([])
     let totalPrice = 0;
     cartloaderData.forEach((item) => {
         const itemprice = parseFloat(item?.price);
+        const itemquantity = parseFloat(item.quantity)
         if (!isNaN(itemprice)) {
-            totalPrice += itemprice
+            totalPrice += itemprice * itemquantity
         }
+        
     })
+    console.log(totalPrice)
+
+    useEffect(()=>{
+        
+    setItemName(cartloaderData.map(item=>item.name))
+    setItemPrice(cartloaderData.map(item=>item.price))
+    setQuantity(cartloaderData.map(item=>item.quantity))
+    }, [cartloaderData])
+    
+    console.log(cartloaderData)
+    console.log(itemname)
+    console.log(itemPrice)
+    console.log(quantityofitem)
+  
 
     const url = `http://localhost:5000/cart?email=${user?.email}`
 
@@ -75,13 +96,14 @@ const MyCart = () => {
         const email = e.target.email.value;
         const number = e.target.number.value;
         const address = e.target.address.value;
-        const coupon = e.target.coupon.value;
+        const itemnames = itemname;
+        const itemprices = itemPrice;
+        const quantity = quantityofitem;
+        const subtotal = totalPrice;
+        const totalprice = totalPrice+10;
 
-        if(coupon === 'FIRST50'){
-            totalPrice = totalPrice/2;
-        }
 
-        const orderInfo = {name, email, number, address, coupon, totalPrice}
+        const orderInfo = {name, email, number, address, itemnames, itemprices, subtotal, totalprice, quantity}
 
         fetch('http://localhost:5000/order',{
             method: 'POST',
@@ -102,14 +124,14 @@ const MyCart = () => {
                         confirmButtonText: 'Ok'
                       })
                       form.reset();
-                      navigate('/')
+                      navigate('/invoice')
                       
                 }
             })
 
     }
     return (
-        <div className="mt-16 mx-[10%]">
+        <div className="pt-32 mx-[10%]">
             <h1 className="text-[#343434] text-4xl font-bold text-center pb-8 border-b-2 border-green-800 rounded-xl w-fit mx-auto ">Your Cart Items</h1>
 
             <div>
@@ -153,9 +175,7 @@ const MyCart = () => {
                                     <td className="text-xl text-[#343434]">$ {item?.price}</td>
                                     <td className="text-xl text-[#343434]">$ {item?.price * item?.quantity}</td>
 
-                                    <th>
-                                        <Link><button className="btn btn-ghost btn-xs text-xl text-green-700 ">details</button></Link>
-                                    </th>
+                                    
                                 </tr>)
                             }
 
@@ -218,9 +238,7 @@ const MyCart = () => {
                                 <TextField id="outlined-basic" className="w-full" name="number" label="Your Phone Number" variant="outlined" required />
                             </div>
 
-                            <div className=" mt-9">
-                                <TextField id="outlined-basic" className="w-full" name="coupon" label="Your Coupon" variant="outlined" />
-                            </div>
+                            
 
                             <div className="mt-9">
                                 <TextField className="w-full"
@@ -235,7 +253,9 @@ const MyCart = () => {
                             </div>
                         </div>
 
+
                         <button className="capitalize h-14 w-full bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Place Order</button>
+                        
                     </div>
                 </div>
             </form>

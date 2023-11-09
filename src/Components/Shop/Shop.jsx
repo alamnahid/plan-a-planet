@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import ShopBanner from "./ShopBanner";
+import Spinner from "../Spinner/Spinner"
 
 
 const Shop = () => {
@@ -107,7 +108,7 @@ const Shop = () => {
 
             <div>
                 {isLoading ? (
-                    <p className="text-2xl font-bold w-[100vw] h-[30vh] flex justify-center items-center text-black">Loading...<span className="loading loading-spinner text-error"></span></p>
+                    <Spinner></Spinner>
                 ) : (
                     // Render your data when it's loaded
                     <div className="flex flex-col lg:flex-row justify-center pr-24">
@@ -138,7 +139,7 @@ const Shop = () => {
                                     showData?.map(plant => <div key={plant._id} className="w-[18rem] cardss px-5 pt-5 pb-4 h-[24rem] rounded-2xl bg-white">
                                         <img className="h-[12rem] w-[16rem] rounded-xl mx-auto" src={plant?.photo} alt="" />
 
-                                        <h1 className="text-[#343434] font-semibold mt-3 text-xl">{plant?.name}</h1>
+                                        <h1 className="text-[#343434] font-semibold mt-3 text-lg">{plant?.name}</h1>
                                         <h1 className="text-[#343434] text-xl">$ {plant?.price}</h1>
                                         <Link to={`/productdetails/${plant._id}`}><button className="capitalize h-14 w-full bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop Now</button></Link>
                                     </div>)

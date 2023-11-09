@@ -27,7 +27,7 @@ const TradingPlants = () => {
                     product?.filter(item=>item.hotsale!=='hotsale').slice(0, 10).map(item => <div data-aos="fade-down" data-aos-delay="200" key={item._id} className="w-[18rem] px-5 pt-5 pb-4 h-[24rem] rounded-2xl bg-white">
                         <img className="h-[12rem] w-[16rem] rounded-xl mx-auto" src={item?.photo} alt="" />
 
-                        <h1 className="text-[#343434] font-semibold mt-3 text-xl">{item?.name}</h1>
+                        <h1 className="text-[#343434] font-semibold mt-3 text-lg">{item?.name}</h1>
                         <h1 className="text-[#343434] text-xl">$ {item?.price}</h1>
 
 

@@ -6,7 +6,7 @@ import MoreBlogs from "./MoreBlogs";
 
 const Blogs = () => {
     return (
-        <div>
+        <div className="pt-20">
             
 <div className="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
   <div className="grid lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-6 ">
@@ -14,10 +14,10 @@ const Blogs = () => {
     <div className="lg:col-span-2">
       <div className="py-8 lg:pe-4 ">
         <div className="space-y-5 lg:space-y-8">
-          <a className="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline dark:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
+          <Link to='/' className="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline dark:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
             <svg className="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-            Back to Blog
-          </a>
+            Back to Home
+          </Link>
 
           <h2 className="text-3xl font-bold lg:text-4xl  dark:text-black">8 Best Low Maintenance Plants For a Busy Home</h2>
 
@@ -25,7 +25,7 @@ const Blogs = () => {
             <Link className="inline-flex items-center gap-1.5 py-1 px-3 sm:py-2 sm:px-4 rounded-full text-xs sm:text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-800 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
               About me
             </Link>
-            <p className="text-xs sm:text-sm text-gray-800 dark:text-gray-200">January 18, 2023</p>
+            <p className="text-xs sm:text-sm text-gray-800 dark:text-gray-800">January 18, 2023</p>
           </div>
 
           <p className="text-lg text-gray-800 dark:text-gray-900">In today's fast-paced world, finding time for plant care can be a challenge. However, that doesn't mean you have to sacrifice the beauty of greenery in your home. Low maintenance plants are the perfect solution for busy individuals and families who still want to enjoy the benefits of indoor or outdoor gardening without a significant time commitment. In this blog, we'll introduce you to the eight best low maintenance plants that can thrive in your busy home, providing you with a touch of nature, improved air quality, and relaxation without demanding excessive attention.</p>

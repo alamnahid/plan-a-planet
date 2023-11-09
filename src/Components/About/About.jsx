@@ -5,7 +5,7 @@ import Addresses from "./Addresses";
 
 const About = () => {
     return (
-       <div>
+       <div className="pt-20">
         <AboutFirstsection></AboutFirstsection>
         <Addresses></Addresses>
 

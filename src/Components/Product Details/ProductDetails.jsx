@@ -11,7 +11,7 @@ import FeatureProducts from "./FeatureProducts";
 const ProductDetails = () => {
     const {user} = useContext(AuthContext)
     
-    const [quantity, setQuantity] = useState(0);
+    const [quantity, setQuantity] = useState(1);
     if (quantity < 0) {
         setQuantity(0)
     }
@@ -54,7 +54,7 @@ const ProductDetails = () => {
 
 
     return (
-        <div className="mt-16">
+        <div className="pt-36">
 
             <div className="flex mx-[10%] gap-16 justify-center items-center flex-col lg:flex-row">
                 <div>

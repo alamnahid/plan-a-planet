@@ -6,7 +6,7 @@ const DashboardMain = () => {
     return (
         <div className="bg-[#F0F5F0]" >
             <Navbar></Navbar>
-            <div className="drawer bg-[#F0F5F0] lg:drawer-open">
+            <div className="drawer pt-28 bg-[#F0F5F0] lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle bg-[#F0F5F0]" />
                 <div className="drawer-content bg-[#F0F5F0] flex flex-col items-center justify-center">
                     

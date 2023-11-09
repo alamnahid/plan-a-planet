@@ -2,13 +2,14 @@ import { useContext } from "react";
 
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../AuthContest/AuthProvider";
+import Spinner from "../Spinner/Spinner";
 
 const PrivateRoute = ({children}) => {
     const location = useLocation()
     
     const {user, loading} = useContext(AuthContext);
     if(loading){
-        return <div className="w-[100vw] h-[60vh] flex justify-center items-center"><progress className="progress w-56 "></progress></div>
+        return <Spinner></Spinner>
     }
     if(user?.email){
         return children;

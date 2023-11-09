@@ -21,6 +21,7 @@ import Contact from "../Contact/Contact";
 import ErrorElement from "../Error Page/ErrorElement";
 import PrivateRoute from "../Root/PrivateRoute";
 import Blogs from "../Blogs/Blogs";
+import Invoice from "../My cart/Invoice";
 
 
 const router = createBrowserRouter([
@@ -77,6 +78,10 @@ const router = createBrowserRouter([
         {
           path: '/blogs',
           element: <Blogs></Blogs>
+        },
+        {
+          path: '/invoice',
+          element: <Invoice></Invoice>
         }
       ]
     },

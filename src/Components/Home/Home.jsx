@@ -1,7 +1,7 @@
 import BestSelling from "./Best Selling/BestSelling";
 import Blog from "./Blog/Blog";
 import CoverHome from "./CoverHome/CoverHome";
-import Faq from "./FAQ/FAQ";
+import Feature from "./Features/Feature";
 import Gallery from "./Gallery/Gallery";
 import Gardenning from "./Gardenning/Gardenning";
 import HotSale from "./Hot Sale/HotSale";
@@ -17,12 +17,13 @@ const Home = () => {
             <SomeCategories></SomeCategories>
             <BestSelling></BestSelling>
             <TradingPlants></TradingPlants>
+            <Feature></Feature>
             <Blog></Blog>
             <HotSale></HotSale>
             <Gardenning></Gardenning>
             <Gallery></Gallery>
             <Review></Review>
-            <Faq></Faq>
+
             
         </div>
     );
