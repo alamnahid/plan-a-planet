@@ -1,10 +1,23 @@
 /* eslint-disable react/no-unknown-property */
 
+import { useEffect, useState } from "react";
+
 
 const DashboardCardContainer = () => {
+  const [product, setProduct] = useState([])
+
+  useEffect(()=>{
+    fetch('http://localhost:5000/plants')
+    .then(res=>res.json())
+    .then(data=>setProduct(data))
+  },[])
+
+  
+
+
     return (
         <div>
-<div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+<div className="max-w-[80vw] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 
   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
     <div className="flex flex-col gap-y-3 lg:gap-y-5 p-4 md:p-5 bg-white border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-800">
@@ -15,7 +28,7 @@ const DashboardCardContainer = () => {
 
       <div className="text-center">
         <h3 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800 dark:text-gray-200">
-          150
+          10
         </h3>
       </div>
 
@@ -40,12 +53,12 @@ const DashboardCardContainer = () => {
     <div className="flex flex-col gap-y-3 lg:gap-y-5 p-4 md:p-5 bg-white border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-800">
       <div className="inline-flex justify-center items-center">
         <span className="w-2 h-2 inline-block bg-green-500 rounded-full me-2"></span>
-        <span className="text-xs font-semibold uppercase text-gray-600 dark:text-gray-400">Successful conversions</span>
+        <span className="text-xs font-semibold uppercase text-gray-600 dark:text-gray-400">Total Plants Uploaded</span>
       </div>
 
       <div className="text-center">
         <h3 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800 dark:text-gray-200">
-          25
+          {product.length}
         </h3>
       </div>
 
@@ -70,12 +83,12 @@ const DashboardCardContainer = () => {
     <div className="flex flex-col gap-y-3 lg:gap-y-5 p-4 md:p-5 bg-white border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-800">
       <div className="inline-flex justify-center items-center">
         <span className="w-2 h-2 inline-block bg-red-500 rounded-full me-2"></span>
-        <span className="text-xs font-semibold uppercase text-gray-600 dark:text-gray-400">Failed conversions</span>
+        <span className="text-xs font-semibold uppercase text-gray-600 dark:text-gray-400">Total Sell</span>
       </div>
 
       <div className="text-center">
         <h3 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800 dark:text-gray-200">
-          4
+          $230
         </h3>
       </div>
 

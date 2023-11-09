@@ -72,8 +72,8 @@ const Statistics = ({allplants}) => {
     return (
         <div>
             <div className="">
-            <div className="mt-20">
-                <PieChart width={500} height={586}>
+            <div className="">
+                <PieChart width={400} height={486}>
                     <Pie
                         data={data}
                         cx="50%"

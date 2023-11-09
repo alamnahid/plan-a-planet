@@ -12,9 +12,9 @@ const DashboardHome = () => {
     return (
         <div>
             <DashboardCardContainer></DashboardCardContainer>
-            <UserProfile></UserProfile>
+            {/* <UserProfile></UserProfile> */}
             <div className="flex justify-around w-full">
-            <UserInfo></UserInfo>
+            {/* <UserInfo></UserInfo> */}
             <Statistics allplants={allplants}></Statistics>
             
         </div>
