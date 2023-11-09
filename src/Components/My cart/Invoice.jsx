@@ -225,12 +225,12 @@ const Invoice = () => {
 <div className="text-center flex justify-center items-center gap-6">
 
 
-<button className="btn btn-primary w-[12rem] text-white text-xl">Print</button>
+<button onClick={handlePrint} className="btn btn-primary w-[12rem] text-white text-xl">Print</button>
 
 
 <div>
 
-<button className="btn btn-secondary w-[12rem] text-white text-xl">Download</button>
+<button onClick={handleDownload} className="btn btn-secondary w-[12rem] text-white text-xl">Download</button>
 
 
 

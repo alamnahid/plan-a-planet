@@ -17,8 +17,8 @@ const BestSelling = () => {
         AOS.init();
       }, []);
     return (
-        <div className="mt-28">
-            <h1 className="text-[#343434] text-4xl font-bold text-center pb-8 border-b-2 border-green-800 rounded-xl w-fit mx-auto ">Best Selling</h1>
+        <div className="mt-8 md:mt-24">
+            <h1 className="text-[#343434] text-xl md:text-4xl font-bold text-center pb-2 md:pb-8 border-b-2 border-green-800 rounded-xl w-fit mx-auto ">Best Selling</h1>
             
             <div className="grid grid-cols-1 md:grid-cols-2 mt-8 justify-items-center items-center gap-8 lg:grid-cols-3 lg:mx-[10%]">
 

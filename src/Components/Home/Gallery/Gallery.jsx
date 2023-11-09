@@ -16,9 +16,9 @@ const Gallery = () => {
       }, []);
     return (
         <div className="mt-28 mx-[10%]">
-            <h1 className="text-[#343434] text-4xl font-bold text-center pb-8 border-b-2 border-green-800 rounded-xl w-fit mx-auto ">Celebs You Love, Love Us</h1>
+            <h1 className="text-[#343434] text-xl md:text-4xl font-bold text-center pb-2 md:pb-8 border-b-2 border-green-800 rounded-xl w-fit mx-auto ">Celebs You Love, Love Us</h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 items-center">
                 <img data-aos="fade-up" data-aos-delay="200" className="gallery" src={cel1} alt="" />
                 <img data-aos="fade-up" data-aos-delay="200" className="gallery" src={cel2} alt="" />
                 <img data-aos="fade-up" data-aos-delay="200" className="gallery" src={cel3} alt="" />

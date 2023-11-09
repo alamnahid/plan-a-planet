@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 // import cart from "../../../assets/icon/cart.svg"
 import logo from "../../../assets/logo/logo.png"
 // import { IconButton } from "@mui/material";
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+// import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { useContext } from "react";
 import { AuthContext } from "../../AuthContest/AuthProvider";
 // import SearchIcon from '@mui/icons-material/Search';
@@ -38,9 +38,13 @@ const Navbar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu bg-white menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52">
-                            <li><NavLink className="text-[#343434] font-semibold text-lg" to='/'>Home</NavLink></li>
-                            <li><NavLink className="text-[#343434] font-semibold text-lg" to='/about'>Home</NavLink></li>
-                            <li><NavLink className="text-[#343434] font-semibold text-lg" to='/contact'>Home</NavLink></li>
+                        <li><NavLink className="text-[#343434] font-semibold text-base" to='/'>Home</NavLink></li>
+                        <li><NavLink className="text-[#343434] font-semibold text-base" to='/shop'>Shop</NavLink></li>
+                        <li><NavLink className="text-[#343434] font-semibold text-base" to='/about'>About</NavLink></li>
+                        <li><NavLink className="text-[#343434] font-semibold text-base" to='/cart'>My Cart</NavLink></li>
+                        <li><NavLink className="text-[#343434] font-semibold text-base" to='/dashboard/dashboardhome'>Dashboard</NavLink></li>
+                        <li><NavLink className="text-[#343434] font-semibold text-base" to='/contact'>Contact</NavLink></li>
+                        <li><NavLink className="text-[#343434] font-semibold text-base" to='/blogs'>Blogs</NavLink></li>
 
                         </ul>
                     </div>

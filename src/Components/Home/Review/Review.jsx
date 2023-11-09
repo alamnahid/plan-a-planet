@@ -61,17 +61,17 @@ const Review = () => {
             const cardIndex = (currentSlide + i) % totalCards;
             const { imageSrc, name, designation, description } = cardData[cardIndex];
             cards.push(
-                <div data-aos="fade-up" data-aos-delay="200" key={cardIndex} className="card hover:translate-x-[-20px] lg:w-[34.875rem] flex flex-col  justify-center  h-[21.8125rem] rounded-xl border-2 border-[#E8E8E8]">
+                <div data-aos="fade-up" data-aos-delay="200" key={cardIndex} className="card hover:translate-x-[-20px] lg:w-[34.875rem] flex flex-col  justify-center h-[15rem] md:h-[21.8125rem] rounded-xl border-2 border-[#E8E8E8]">
                     <div className="flex gap-4 ml-[3.13rem]">
                         <img className='w-[3.75rem] h-[3.75rem] rounded-[50%]' src={imageSrc} alt="" />
                         <div>
-                            <h1 className='text-[#444444] text-2xl font-bold'>{name}</h1>
-                            <p className='text-[#444444] text-xl font-medium mt-2'>{designation}</p>
+                            <h1 className='text-[#444444] text-xs md:text-2xl font-bold'>{name}</h1>
+                            <p className='text-[#444444] text-xs md:text-xl font-medium mt-2'>{designation}</p>
 
                         </div>
-                        <img className='w-[3.5rem] h-[3.5rem] ml-20' src={quotes} alt="" />
+                        <img className='md:w-[3.5rem] md:h-[3.5rem] md:ml-20' src={quotes} alt="" />
                     </div>
-                    <p className="lg:w-[30rem] mt-5 mx-[3.13rem] text-[#272626]">
+                    <p className="lg:w-[30rem] mt-5 mx-[3.13rem] text-[#272626] text-xs md:text-base">
                         {description}
                     </p>
                     <div className="ml-[3rem] mt-5">
@@ -97,12 +97,12 @@ const Review = () => {
 
 
     return (
-        <div className="mt-28 mx-[10%]">
-            <h1 className="text-[#343434] text-4xl font-bold text-center pb-8 border-b-2 border-green-800 rounded-xl w-fit mx-auto ">What Customer Says</h1>
+        <div className="mt-12 md:mt-24 mx-[3%] md:mx-[10%]">
+            <h1 className="text-[#343434] text-xl md:text-4xl font-bold text-center pb-2 md:pb-8 border-b-2 border-green-800 rounded-xl w-fit mx-auto ">What Customer Says</h1>
 
 
             <div className="carousel-container relative mt-12">
-                <div className="carousel flex flex-col lg:flex-row justify-evenly items-center">
+                <div className="carousel grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center">
                     {renderCards()}
                 </div>
                 <div className=" flex justify-between ">
