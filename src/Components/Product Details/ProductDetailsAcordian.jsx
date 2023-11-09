@@ -3,7 +3,7 @@ import plant from "../../assets/images/anime-plant.gif"
 const ProductDetailsAcordian = () => {
     return (
         <div className="flex flex-col-reverse lg:flex-row shopcontainer mt-28 justify-evenly items-center lg:gap-12">
-            <div className="lg:w-[50vw] lg:pt-20 h-[36rem] text-black  mt-16 ">
+            <div className="lg:w-[50vw] lg:pt-20 md:h-[36rem] py-8 md:py-0 text-black  mt-16 ">
                 <div className="collapse collapse-plus bg-[#f0f5f098]">
                     <input type="radio" name="my-accordion-3" checked="checked" />
                     <div className="collapse-title text-xl font-medium">

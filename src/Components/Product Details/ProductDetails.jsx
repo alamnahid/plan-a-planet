@@ -58,19 +58,19 @@ const ProductDetails = () => {
 
             <div className="flex mx-[10%] gap-16 justify-center items-center flex-col lg:flex-row">
                 <div>
-                    <img src={plantdata?.photo} alt="" />
+                    <img className="" src={plantdata?.photo} alt="" />
                 </div>
 
                 <div>
-                    <h1 className="text-[2rem] text-[#343434] font-bold">{plantdata?.name}</h1>
+                    <h1 className="text-xl md:text-[2rem] text-[#343434] font-bold">{plantdata?.name}</h1>
                     <div>
                         {
                             plantdata?.hotsale ? <div className="flex gap-3 items-center">
-                                <p className="text-[2rem] text-[#343434]">$ {plantdata?.price}</p>
-                                <p className="text-[2rem] text-[#ff0000]">$ <del>{plantdata?.price}</del></p>
+                                <p className="text-xl md:text-[2rem] text-[#343434]">$ {plantdata?.price}</p>
+                                <p className="text-xl md:text-[2rem] text-[#ff0000]">$ <del>{plantdata?.price}</del></p>
                             </div>
                             :
-                            <p className="text-[2rem] text-[#343434]">$ {plantdata?.price}</p>
+                            <p className="text-xl md:text-[2rem] text-[#343434]">$ {plantdata?.price}</p>
                         }
                     </div>
                     <p className="text-gray-500 lg:w-[40rem] mb-7">{plantdata?.description}</p>
