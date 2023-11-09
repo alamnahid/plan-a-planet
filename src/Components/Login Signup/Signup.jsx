@@ -36,7 +36,7 @@ const Signup = () => {
             })
 
         const userInfo = { name, email }
-        fetch('https://plan-a-plant-server-lf1d65ppi-nahid-alams-projects.vercel.app/user', {
+        fetch('http://localhost:5000/user', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -8,7 +8,7 @@ const HotSale = () => {
     const [product, setProduct] = useState([])
 
     useEffect(() => {
-        fetch('https://plan-a-plant-server-lf1d65ppi-nahid-alams-projects.vercel.app/plants')
+        fetch('http://localhost:5000/plants')
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])

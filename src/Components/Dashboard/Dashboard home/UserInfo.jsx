@@ -5,7 +5,7 @@ const UserInfo = () => {
     const [userinfo, setUserInfo] = useState([])
 
     useEffect(()=>{
-        fetch('https://plan-a-plant-server-lf1d65ppi-nahid-alams-projects.vercel.app/user')
+        fetch('http://localhost:5000/user')
         .then(res=>res.json())
         .then(data=>setUserInfo(data))
     }, [])

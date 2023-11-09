@@ -17,7 +17,7 @@ const AddProduct = () => {
 
         const productInfo = { name, photo, category, producttype, price, description, rating }
 
-        fetch('https://plan-a-plant-server-lf1d65ppi-nahid-alams-projects.vercel.app/plants', {
+        fetch('http://localhost:5000/plants', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

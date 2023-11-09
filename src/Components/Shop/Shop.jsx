@@ -49,7 +49,7 @@ const Shop = () => {
     const [itemsPerPage, setItemsPerpage] = useState(8)
 
     useEffect(() => {
-        fetch('https://plan-a-plant-server-lf1d65ppi-nahid-alams-projects.vercel.app/plantscount')
+        fetch('http://localhost:5000/plantscount')
             .then(res => res.json())
             .then(data => setTotalCount(data))
     }, [])
@@ -82,7 +82,7 @@ const Shop = () => {
 
     // apatotot
     useEffect(() => {
-        fetch(`https://plan-a-plant-server-lf1d65ppi-nahid-alams-projects.vercel.app/plants?page=${currentPage}&size=${itemsPerPage}`)
+        fetch(`http://localhost:5000/plants?page=${currentPage}&size=${itemsPerPage}`)
             .then(res => res.json())
             .then(data => {
                 setShowData(data)

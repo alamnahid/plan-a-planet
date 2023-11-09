@@ -19,7 +19,7 @@ const DeleteProduct = () => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://plan-a-plant-server-lf1d65ppi-nahid-alams-projects.vercel.app/plants/${id}`,{
+                fetch(`http://localhost:5000/plants/${id}`,{
                     method: 'DELETE'
                 })
                 .then(res=>res.json())

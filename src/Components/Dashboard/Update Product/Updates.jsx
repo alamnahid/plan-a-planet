@@ -19,7 +19,7 @@ const Updates = () => {
         const rating = e.target.rating.value;
 
         const productInfo = { name, photo, category, producttype, price, description, rating }
-        fetch(`https://plan-a-plant-server-lf1d65ppi-nahid-alams-projects.vercel.app/plants/${updateData._id}`,{
+        fetch(`http://localhost:5000/plants/${updateData._id}`,{
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -22,7 +22,7 @@ const MyCart = () => {
         }
     })
 
-    const url = `https://plan-a-plant-server-lf1d65ppi-nahid-alams-projects.vercel.app/cart?email=${user?.email}`
+    const url = `http://localhost:5000/cart?email=${user?.email}`
 
 
 
@@ -45,7 +45,7 @@ const MyCart = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://plan-a-plant-server-lf1d65ppi-nahid-alams-projects.vercel.app/cart/${id}`, {
+                fetch(`http://localhost:5000/cart/${id}`, {
                     method: 'DELETE'
 
                 })
@@ -83,7 +83,7 @@ const MyCart = () => {
 
         const orderInfo = {name, email, number, address, coupon, totalPrice}
 
-        fetch('https://plan-a-plant-server-lf1d65ppi-nahid-alams-projects.vercel.app/order',{
+        fetch('http://localhost:5000/order',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
