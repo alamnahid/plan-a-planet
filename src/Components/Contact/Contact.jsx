@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import logo from "../../assets/logo/logo - Copy.png"
+import logo from "../../assets/logo/logo.png"
 
 const Contact = () => {
     return (

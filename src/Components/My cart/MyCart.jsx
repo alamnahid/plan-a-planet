@@ -5,16 +5,19 @@ import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { AuthContext } from "../AuthContest/AuthProvider";
+import moment from "moment/moment";
 
 
 const MyCart = () => {
     const { user } = useContext(AuthContext);
+    const time = moment().format('MMMM Do YYYY, h:mm');
     // console.log(user)
     const navigate = useNavigate();
 
     const [itemname, setItemName] = useState('')
     const [itemPrice, setItemPrice] = useState(0)
     const [quantityofitem, setQuantity] = useState(0)
+    const [itemtotalprice, setitemtotalprice] = useState(0)
 
 
 
@@ -35,6 +38,7 @@ const MyCart = () => {
     setItemName(cartloaderData.map(item=>item.name))
     setItemPrice(cartloaderData.map(item=>item.price))
     setQuantity(cartloaderData.map(item=>item.quantity))
+    setitemtotalprice(cartloaderData.map(item=>item.price*item.quantity))
     }, [cartloaderData])
     
     console.log(cartloaderData)
@@ -101,9 +105,11 @@ const MyCart = () => {
         const quantity = quantityofitem;
         const subtotal = totalPrice;
         const totalprice = totalPrice+10;
+        const issuetime = time;
+        const itemtotalpric=itemtotalprice;
 
 
-        const orderInfo = {name, email, number, address, itemnames, itemprices, subtotal, totalprice, quantity}
+        const orderInfo = {name, email, number, address, itemnames, itemprices, subtotal, totalprice, quantity, issuetime, itemtotalpric}
 
         fetch('http://localhost:5000/order',{
             method: 'POST',

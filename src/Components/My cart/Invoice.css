@@ -1,0 +1,104 @@
+.buttonn {
+    position: relative;
+    width: 200px;
+    height: auto;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  
+  .radion {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    cursor: pointer;
+  }
+  
+  .buttonn a {
+    text-decoration: none;
+    text-align: center;
+    width: 200px;
+    padding: 20px;
+    background: linear-gradient(90deg, #1ee3cf 50%, #0d3f67 50%) no-repeat;
+    background-position: right center;
+    background-size: 200% 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .buttonn a:hover, .radio:hover + a {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .buttonn a:active {
+    box-shadow: none;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+  }
+  
+  .openn {
+    display: none;
+  }
+  
+  .radion:checked ~ a {
+    animation: loading 5s linear forwards 1;
+  }
+  
+  .radion:checked + .download {
+    display: none;
+  }
+  
+  .radion:checked ~ .open {
+    display: block;
+  }
+  
+  @keyframes loading {
+    0% { 
+      height: 100%; 
+      padding: 20px;
+      background-position: right center;
+      color: transparent;
+      box-shadow: none;
+      pointer-events: none;
+    }
+    2% { 
+      height: 5px; 
+      padding: 0 20px;
+      color: transparent;
+      pointer-events: none;
+    }
+    95% { 
+      height: 5px; 
+      padding: 0 20px;
+      background-position: left center;
+      color: transparent;
+      pointer-events: none;
+    }
+    100% {
+      height: 100%; 
+      padding: 18px 20px;
+      background-position: left center;
+      color: #FFF;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      z-index: 4;
+      pointer-events: auto;
+    }
+  }
+  
+  
+  .copyn {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color:#fff;
+  }
