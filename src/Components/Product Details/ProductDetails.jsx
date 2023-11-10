@@ -26,7 +26,7 @@ const ProductDetails = () => {
     // console.log(quantity)
 
     const handleaddToCart = ()=>{
-        fetch('http://localhost:5000/cart',{
+        fetch('https://plan-a-plant-server.vercel.app/cart',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -56,24 +56,24 @@ const ProductDetails = () => {
     return (
         <div className="pt-36">
 
-            <div className="flex mx-[10%] gap-16 justify-center items-center flex-col lg:flex-row">
+            <div className="flex mx-[10%] gap-16 justify-center items-center flex-col xl:flex-row">
                 <div>
-                    <img className="" src={plantdata?.photo} alt="" />
+                    <img className="w-[400px] rounded-3xl" src={plantdata?.photo} alt="" />
                 </div>
 
-                <div>
+                <div className="">
                     <h1 className="text-xl md:text-[2rem] text-[#343434] font-bold">{plantdata?.name}</h1>
                     <div>
                         {
                             plantdata?.hotsale ? <div className="flex gap-3 items-center">
-                                <p className="text-xl md:text-[2rem] text-[#343434]">$ {plantdata?.price}</p>
-                                <p className="text-xl md:text-[2rem] text-[#ff0000]">$ <del>{plantdata?.price}</del></p>
+                                <p className="text-xl mt-4 md:text-[2rem] text-[#343434]">$ {plantdata?.price}</p>
+                                <p className="text-xl mt-3 md:text-[2rem] text-[#ff0000]">$ <del>{plantdata?.price}</del></p>
                             </div>
                             :
-                            <p className="text-xl md:text-[2rem] text-[#343434]">$ {plantdata?.price}</p>
+                            <p className="text-xl mt-4 md:text-[2rem] text-[#343434]">$ {plantdata?.price}</p>
                         }
                     </div>
-                    <p className="text-gray-500 lg:w-[40rem] mb-7">{plantdata?.description}</p>
+                    <p className="text-gray-500 mt-3 lg:w-[40rem] mb-7">{plantdata?.description}</p>
 
                     <div className="flex gap-3 justify-between items-center">
 
@@ -87,7 +87,7 @@ const ProductDetails = () => {
                             </div>
                         </div>
 
-                        <div className="flex gap-4 items-center">
+                        <div className="flex md:gap-4 items-center">
                             <p className="text-[#343434] lg:text-xl w-[10rem]">Include Planter</p>
                             <select className="select w-full max-w-[6rem] bg-[#F0F5F0] text-black border-2 border-black text-xl h-[2.25rem]">
                                 <option>Yes</option>

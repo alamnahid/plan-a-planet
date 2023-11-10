@@ -13,7 +13,7 @@ const Statistics = ({allplants}) => {
     
     // console.log(cartloaderData[0].price)
 
-    const url = `http://localhost:5000/cart?email=${user?.email}`
+    const url = `https://plan-a-plant-server.vercel.app/cart?email=${user?.email}`
     
     // useEffect(()=>{
     //     fetch(url, {credentials: 'include'})

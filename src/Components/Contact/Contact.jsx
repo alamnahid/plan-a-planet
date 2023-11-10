@@ -1,7 +1,49 @@
 /* eslint-disable react/no-unknown-property */
+import { useContext } from "react";
 import logo from "../../assets/logo/logo.png"
+import { AuthContext } from "../AuthContest/AuthProvider";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+
+    const {user} = useContext(AuthContext);
+    // console.log(user)
+
+    const handleContactSubmit = (e)=>{
+
+        e.preventDefault()
+
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const message = e.target.message.value;
+        const userMessageInfo = {name, email, message}
+        // console.log(userMessageInfo)
+       
+        fetch('https://plan-a-plant-server.vercel.app/contact', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(userMessageInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Message Sent Successfully',
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
+                    //   form.reset()
+
+                }
+            })
+
+    }
     return (
         <div className="pt-20 flex flex-col lg:flex-row justify-between items-center lg:h-[51rem] px-[10%]">
 
@@ -94,12 +136,14 @@ const Contact = () => {
 
                 <h1 className="  text-[#331A15] mt-3 rancho text-2xl md:text-[2.8rem] font-bold shadow-amber-950">Connect with Us</h1>
 
-                <form className="mt-8 flex flex-col">
-                    <input className="w-full lg:w-[31rem] h-[3rem] rounded-md bg-white placeholder:text-gray-500 pl-4" type="text" name="name" placeholder="Name" id="" />
-                    <input className="w-full lg:w-[31rem] mt-4 h-[3rem] rounded-md bg-white placeholder:text-gray-500 pl-4" type="text" name="email" placeholder="Email" id="" />
-                    <input className="lg:w-[31rem] mt-4 h-[8rem] rounded-md bg-white placeholder:text-gray-500 pl-4" type="text" name="message" placeholder="Message" id="" />
+                <form onSubmit={handleContactSubmit} className="mt-8 flex flex-col">
+                    <input className="w-full lg:w-[31rem] h-[3rem] rounded-md bg-white text-black placeholder:text-gray-700 pl-4" type="text" name="name" placeholder="Enter your name" id="" defaultValue={user?.displayName} required />
+                    
+                    <input className="w-full lg:w-[31rem] mt-4 h-[3rem] rounded-md bg-white text-black placeholder:text-gray-700 pl-4" type="email" name="email" placeholder="Enter your Email" id="" defaultValue={user?.email} required />
+                    
+                    <input className="lg:w-[31rem] mt-4 h-[8rem] rounded-md bg-white placeholder:text-gray-500 pl-4" type="text" name="message" placeholder="Enter Message" required id="" />
 
-                    <button className="btn bg-green-700 border-none  text-white capitalize mt-6 w-[12.3rem] h-[4rem] rancho text-2xl">Send Message</button>
+                    <button type="submit" className="btn bg-green-700 border-none  text-white capitalize mt-6 w-[12.3rem] h-[4rem] rancho text-2xl">Send Message</button>
 
                 </form>
 

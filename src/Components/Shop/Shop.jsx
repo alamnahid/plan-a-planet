@@ -27,7 +27,7 @@ const Shop = () => {
 
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/plants?sort=${asc ? 'asc' : 'des'}&search=${search.toString()}`)
+        fetch(`https://plan-a-plant-server.vercel.app/plants?sort=${asc ? 'asc' : 'des'}&search=${search.toString()}`)
         .then(res=>res.json())
         .then(data=>setShowData(data))
     }, [asc, search])
@@ -75,7 +75,7 @@ const Shop = () => {
     const [itemsPerPage, setItemsPerpage] = useState(15)
 
     useEffect(() => {
-        fetch('http://localhost:5000/plantscount')
+        fetch('https://plan-a-plant-server.vercel.app/plantscount')
             .then(res => res.json())
             .then(data => setTotalCount(data))
     }, [])
@@ -108,7 +108,7 @@ const Shop = () => {
 
     // apatotot
     useEffect(() => {
-        fetch(`http://localhost:5000/plants?page=${currentPage}&size=${itemsPerPage}`)
+        fetch(`https://plan-a-plant-server.vercel.app/plants?page=${currentPage}&size=${itemsPerPage}`)
             .then(res => res.json())
             .then(data => {
                 setShowData(data)
