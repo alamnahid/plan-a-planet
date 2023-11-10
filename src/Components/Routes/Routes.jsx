@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/productdetails/:id',
-          element: <ProductDetails></ProductDetails>,
+          element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
           loader: ({params}) =>fetch(`http://localhost:5000/plants/${params.id}`)
         },
         {
@@ -81,7 +81,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/invoice',
-          element: <Invoice></Invoice>
+          element: <PrivateRoute><Invoice></Invoice></PrivateRoute>
         }
       ]
     },
@@ -89,7 +89,7 @@ const router = createBrowserRouter([
     {
       
         path: 'dashboard',
-        element: <DashboardMain></DashboardMain>,
+        element: <PrivateRoute><DashboardMain></DashboardMain></PrivateRoute>,
         errorElement: <ErrorElement></ErrorElement>,
         children: [
           {

@@ -72,7 +72,7 @@ const Shop = () => {
     // pagination
     const [totalCount, setTotalCount] = useState(0)
     const [currentPage, setCurrentPage] = useState(0)
-    const [itemsPerPage, setItemsPerpage] = useState(8)
+    const [itemsPerPage, setItemsPerpage] = useState(15)
 
     useEffect(() => {
         fetch('http://localhost:5000/plantscount')
@@ -97,7 +97,7 @@ const Shop = () => {
         pages.push(i)
     }
 
-    const options = [8, 16, 24, 40]
+    const options = [15, 25, 35, 45]
     const handleSelectChange = (e) => {
         const val = parseInt(e.target.value);
         console.log(val);
