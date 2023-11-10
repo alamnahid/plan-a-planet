@@ -2,12 +2,39 @@ import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import ShopBanner from "./ShopBanner";
 import Spinner from "../Spinner/Spinner"
-
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
+import PriceRangeSlider from "./PriceRangeSlider";
 
 const Shop = () => {
-    const plantsloaderData = useLoaderData();
-    const [showData, setShowData] = useState(plantsloaderData)
+    // const plantsloaderData = useLoaderData();
+    const [showData, setShowData] = useState([])
     const [isLoading, setIsLoading] = useState(true);
+    const [asc, setAsc] = useState(true)
+    const [minvalue, setMinValue] = useState(50)
+    const [maxvalue, setMaxValue] = useState(100)
+    const [search, setSearch] = useState('')
+    // const [search, setSearch] = useState('')
+
+    const handleSearch = (e)=>{
+        e.preventDefault();
+         const search = e.target.search.value;
+         console.log(typeof(search))
+
+         setSearch(search)
+    }
+ 
+
+    
+
+
+    useEffect(()=>{
+        fetch(`http://localhost:5000/plants?sort=${asc ? 'asc' : 'des'}&search=${search.toString()}`)
+        .then(res=>res.json())
+        .then(data=>setShowData(data))
+    }, [asc, search])
+
+
 
     const [categorie, setCategorie] = useState([])
     const [semicategorie, setSemiCategorie] = useState([])
@@ -129,6 +156,18 @@ const Shop = () => {
                         </div> */}
 
                         <div>
+
+                        
+
+                            <div className="flex justify-between items-center mt-12">
+                            <button className="btn btn-success capitalize text-black font-bold text-lg" onClick={()=>setAsc(!asc)}>{asc ? 'Sort Price High to Low' : 'Sort Price Low to High'}</button>
+
+                            <form onSubmit={handleSearch} className="flex">
+                            <input type="text" name="search" placeholder="Search Here" className="input input-bordered input-success w-full rounded-r-none max-w-xs bg-white" />
+                            
+                            <input className="btn rounded-l-none  btn-success text-black capitalize text-lg" type="submit" value="search" />
+                            </form>
+                            </div>
                             
 
                             <div className="mt-12 md:mt-24 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5  justify-items-center items-center gap-6">

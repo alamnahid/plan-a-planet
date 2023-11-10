@@ -11,7 +11,8 @@ const AddProduct = () => {
         const photo = e.target.photo.value;
         const category = e.target.category.value;
         const producttype = e.target.producttype.value;
-        const price = e.target.price.value;
+        const priceofProduct = e.target.price.value;
+        const price = parseFloat(priceofProduct);
         const description = e.target.description.value;
         const rating = e.target.rating.value;
 
@@ -44,7 +45,7 @@ const AddProduct = () => {
     }
     return (
         <div>
-            <div style={{ boxShadow: "-2px 2px 15px -1px rgba(113, 113, 113, 0.12)" }} className="lg:w-[60vw] mt-16 mx-auto p-8 lg:p-16 rounded-lg bg-white text-black">
+            <div style={{ boxShadow: "-2px 2px 15px -1px rgba(113, 113, 113, 0.12)" }} className="w-[90vw] lg:w-[60vw] mt-16 mx-auto p-8 lg:p-16 rounded-lg bg-white text-black">
                 <h1 className="text-[1.5rem] font-medium">Add New Product</h1>
                 <p className="mt-3 text-[#717171] ">Enter Product Details</p>
 

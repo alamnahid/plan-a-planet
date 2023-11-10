@@ -37,7 +37,7 @@ const router = createBrowserRouter([
         {
           path: '/shop',
           element: <Shop></Shop>,
-          loader: ()=>fetch('http://localhost:5000/plants')
+          // loader: ()=>fetch('http://localhost:5000/plants')
         },
         {
             path: '/about',

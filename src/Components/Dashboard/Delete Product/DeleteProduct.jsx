@@ -51,7 +51,7 @@ const DeleteProduct = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
                 {
                     plants?.map(item => <div key={item._id} className="flex flex-col text-black lg:flex-row border-2 border-gray-400 p-4 items-center gap-12">
-                        <img className="w-[40vw] lg:w-[20vw]" src={item.photo} alt="" />
+                        <img className="w-[40vw] lg:w-[20vw] h-[150px] md:h-[200px] lg:h-[250px] xl:h-[300px]" src={item.photo} alt="" />
 
                         <div className="pr-8">
                             <h1 className="text-xl font-medium ">{item.name}</h1>

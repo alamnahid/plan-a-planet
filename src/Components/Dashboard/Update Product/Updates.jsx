@@ -14,7 +14,8 @@ const Updates = () => {
         const photo = e.target.photo.value;
         const category = e.target.category.value;
         const producttype = e.target.producttype.value;
-        const price = e.target.price.value;
+        const priceofProduct = e.target.price.value;
+        const price = parseFloat(priceofProduct);
         const description = e.target.description.value;
         const rating = e.target.rating.value;
 
