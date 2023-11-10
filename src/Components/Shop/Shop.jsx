@@ -2,9 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import ShopBanner from "./ShopBanner";
 import Spinner from "../Spinner/Spinner"
-import Slider from 'rc-slider';
-import 'rc-slider/assets/index.css';
-import PriceRangeSlider from "./PriceRangeSlider";
+
 
 const Shop = () => {
     // const plantsloaderData = useLoaderData();
@@ -159,8 +157,8 @@ const Shop = () => {
 
                         
 
-                            <div className="flex justify-between items-center mt-12">
-                            <button className="btn btn-success capitalize text-black font-bold text-lg" onClick={()=>setAsc(!asc)}>{asc ? 'Sort Price High to Low' : 'Sort Price Low to High'}</button>
+                            <div className="flex justify-between items-center mt-12 gap-4 px-3">
+                            <button className="btn btn-success capitalize text-black font-bold text-xs md:text-lg" onClick={()=>setAsc(!asc)}>{asc ? 'Sort Price High to Low' : 'Sort Price Low to High'}</button>
 
                             <form onSubmit={handleSearch} className="flex">
                             <input type="text" name="search" placeholder="Search Here" className="input input-bordered input-success w-full rounded-r-none max-w-xs bg-white" />

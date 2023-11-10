@@ -40,7 +40,7 @@ const Invoice = () => {
 
       }
 
-    console.log(orderData)
+    // console.log(orderData)
 
 
 

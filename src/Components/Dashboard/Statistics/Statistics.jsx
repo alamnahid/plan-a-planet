@@ -34,7 +34,7 @@ const Statistics = ({allplants}) => {
             totalPrice+=itemprice
         }
     })
-    console.log(totalPrice)
+    // console.log(totalPrice)
     // console.log(allplants)
 
     let allplantstotalprice = 0;
@@ -45,7 +45,7 @@ const Statistics = ({allplants}) => {
             allplantstotalprice+=itemprice
         }
     })
-    console.log(allplantstotalprice.toFixed(2))
+    // console.log(allplantstotalprice.toFixed(2))
 
 
     const data = [

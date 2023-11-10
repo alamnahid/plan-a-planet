@@ -8,9 +8,9 @@ const Contact = () => {
             <div>
 
                 <img className="w-[4.6rem] h-[5.6rem]" src={logo} alt="" />
-                <h1 className="mt-6  text-[#331A15] rancho text-[2.8rem] font-bold shadow-amber-950">Plan a Plant</h1>
+                <h1 className="mt-6  text-[#331A15] rancho text-xl md:text-[2.8rem] font-bold shadow-amber-950">Plan a Plant</h1>
 
-                <p className="my-8 text-[#1B1A1A] lg:w-[41rem] railway text-xl">
+                <p className="my-8 text-[#1B1A1A] lg:w-[41rem] railway md:text-xl">
                 We offer a diverse selection of plants, from lush tropicals to elegant succulents, ensuring there's a plant for every style and space. 
                 </p>
 
@@ -57,7 +57,7 @@ const Contact = () => {
 
                 </div>
 
-                <h1 className="mt-8  text-[#331A15] rancho text-[2.8rem] font-bold shadow-amber-950">Get in Touch</h1>
+                <h1 className="mt-8  text-[#331A15] rancho text-xl md:text-[2.8rem] font-bold shadow-amber-950">Get in Touch</h1>
 
                 <div className="mt-[2.37rem]">
                     <div className="flex gap-8">
@@ -65,7 +65,7 @@ const Contact = () => {
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 4.5C1.5 3.70435 1.81607 2.94129 2.37868 2.37868C2.94129 1.81607 3.70435 1.5 4.5 1.5H5.872C6.732 1.5 7.482 2.086 7.691 2.92L8.796 7.343C8.88554 7.701 8.86746 8.07746 8.74401 8.42522C8.62055 8.77299 8.39723 9.07659 8.102 9.298L6.809 10.268C6.674 10.369 6.645 10.517 6.683 10.62C7.24738 12.1549 8.1386 13.5487 9.29495 14.7051C10.4513 15.8614 11.8451 16.7526 13.38 17.317C13.483 17.355 13.63 17.326 13.732 17.191L14.702 15.898C14.9234 15.6028 15.227 15.3794 15.5748 15.256C15.9225 15.1325 16.299 15.1145 16.657 15.204L21.08 16.309C21.914 16.518 22.5 17.268 22.5 18.129V19.5C22.5 20.2956 22.1839 21.0587 21.6213 21.6213C21.0587 22.1839 20.2956 22.5 19.5 22.5H17.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" fill="#331A15" />
                         </svg>
 
-                        <p className="text-[#1B1A1A] railway text-xl">+88 01796281914</p>
+                        <p className="text-[#1B1A1A] railway md:text-xl">+88 01796281914</p>
                     </div>
 
                     <div className="flex gap-8 mt-4">
@@ -74,7 +74,7 @@ const Contact = () => {
                             <path d="M22.5 6.908V6.75C22.5 5.95435 22.1839 5.19129 21.6213 4.62868C21.0587 4.06607 20.2956 3.75 19.5 3.75H4.5C3.70435 3.75 2.94129 4.06607 2.37868 4.62868C1.81607 5.19129 1.5 5.95435 1.5 6.75V6.908L11.214 12.886C11.4504 13.0314 11.7225 13.1084 12 13.1084C12.2775 13.1084 12.5496 13.0314 12.786 12.886L22.5 6.908Z" fill="#331A15" />
                         </svg>
 
-                        <p className="text-[#1B1A1A] railway text-xl">nahidalam13765@gmail.com</p>
+                        <p className="text-[#1B1A1A] railway md:text-xl">nahidalam13765@gmail.com</p>
                     </div>
 
                     <div className="flex gap-8 mt-4">
@@ -82,7 +82,7 @@ const Contact = () => {
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M11.54 22.351L11.61 22.391L11.638 22.407C11.749 22.467 11.8733 22.4985 11.9995 22.4985C12.1257 22.4985 12.25 22.467 12.361 22.407L12.389 22.392L12.46 22.351C12.8511 22.1191 13.2328 21.8716 13.604 21.609C14.5651 20.9305 15.463 20.1667 16.287 19.327C18.231 17.337 20.25 14.347 20.25 10.5C20.25 8.31196 19.3808 6.21354 17.8336 4.66637C16.2865 3.11919 14.188 2.25 12 2.25C9.81196 2.25 7.71354 3.11919 6.16637 4.66637C4.61919 6.21354 3.75 8.31196 3.75 10.5C3.75 14.346 5.77 17.337 7.713 19.327C8.53664 20.1667 9.43427 20.9304 10.395 21.609C10.7666 21.8716 11.1485 22.1191 11.54 22.351ZM12 13.5C12.7956 13.5 13.5587 13.1839 14.1213 12.6213C14.6839 12.0587 15 11.2956 15 10.5C15 9.70435 14.6839 8.94129 14.1213 8.37868C13.5587 7.81607 12.7956 7.5 12 7.5C11.2044 7.5 10.4413 7.81607 9.87868 8.37868C9.31607 8.94129 9 9.70435 9 10.5C9 11.2956 9.31607 12.0587 9.87868 12.6213C10.4413 13.1839 11.2044 13.5 12 13.5Z" fill="#331A15" />
                         </svg>
 
-                        <p className="text-[#1B1A1A] railway text-xl">Dhaka, Bangladesh</p>
+                        <p className="text-[#1B1A1A] railway md:text-xl">Dhaka, Bangladesh</p>
                     </div>
 
                 </div>
@@ -90,9 +90,9 @@ const Contact = () => {
 
             </div>
 
-            <div>
+            <div className="w-full md:w-auto">
 
-                <h1 className="  text-[#331A15] rancho text-[2.8rem] font-bold shadow-amber-950">Connect with Us</h1>
+                <h1 className="  text-[#331A15] mt-3 rancho text-2xl md:text-[2.8rem] font-bold shadow-amber-950">Connect with Us</h1>
 
                 <form className="mt-8 flex flex-col">
                     <input className="w-full lg:w-[31rem] h-[3rem] rounded-md bg-white placeholder:text-gray-500 pl-4" type="text" name="name" placeholder="Name" id="" />

@@ -1,12 +1,37 @@
+import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 
 
 const UpdateProduct = () => {
-    const plantData = useLoaderData()
-    console.log(plantData)
+    // const plantData = useLoaderData()
+    const [plantData, setShowData] = useState([])
+    const [search, setSearch] = useState('')
+
+    const handleSearch = (e)=>{
+        e.preventDefault();
+         const search = e.target.search.value;
+        //  console.log(typeof(search))
+
+         setSearch(search)
+    }
+
+    useEffect(()=>{
+        fetch(`http://localhost:5000/plants?search=${search.toString()}`)
+        .then(res=>res.json())
+        .then(data=>setShowData(data))
+    }, [search])
+
+
+    // console.log(plantData)
     return (
-        <div>
+        <div className="">
             <h1 className="text-3xl text-center text-black font-semibold mt-16">Total {plantData.length} Product</h1>
+
+            <form onSubmit={handleSearch} className="flex mt-6">
+                            <input type="text" name="search" placeholder="Search Here" className="input input-bordered input-success w-full rounded-r-none max-w-xs bg-white" />
+                            
+                            <input className="btn rounded-l-none  btn-success text-black capitalize text-lg" type="submit" value="search" />
+                            </form>
 
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mt-16">
                 {

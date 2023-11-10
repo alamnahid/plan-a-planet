@@ -6,7 +6,7 @@ import { AuthContext } from "../AuthContest/AuthProvider";
 
 const DashboardMain = () => {
     const {user} = useContext(AuthContext)
-    console.log(user)
+    // console.log(user)
     return (
         <div className="bg-[#F0F5F0]" >
             <Navbar></Navbar>

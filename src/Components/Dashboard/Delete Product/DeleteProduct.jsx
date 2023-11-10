@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 const DeleteProduct = () => {
     const plantData = useLoaderData()
     const [plants, setPlants] = useState(plantData)
-    console.log(plantData)
+    // console.log(plantData)
     const handleDeleteProduct = (id)=>{
         Swal.fire({
             title: 'Are you sure?',

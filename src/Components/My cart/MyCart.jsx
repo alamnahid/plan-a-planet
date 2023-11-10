@@ -31,7 +31,7 @@ const MyCart = () => {
         }
         
     })
-    console.log(totalPrice)
+    // console.log(totalPrice)
 
     useEffect(()=>{
         
@@ -41,10 +41,10 @@ const MyCart = () => {
     setitemtotalprice(cartloaderData.map(item=>item.price*item.quantity))
     }, [cartloaderData])
     
-    console.log(cartloaderData)
-    console.log(itemname)
-    console.log(itemPrice)
-    console.log(quantityofitem)
+    // console.log(cartloaderData)
+    // console.log(itemname)
+    // console.log(itemPrice)
+    // console.log(quantityofitem)
   
 
     const url = `http://localhost:5000/cart?email=${user?.email}`

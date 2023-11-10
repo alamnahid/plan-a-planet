@@ -64,7 +64,7 @@ const Navbar = () => {
                 <div className="navbar-end">
                     <div className="flex gap-5 items-center">
                         {
-                            user? <Link onClick={handdleLogout} to='/login'><h4 className="text-green-900 font-bold text-lg hover:underline cursor-pointer">Log out</h4></Link>
+                            user? <Link onClick={handdleLogout} to='/login'><h4 className="text-green-900 hidden md:block font-bold text-lg hover:underline cursor-pointer">Log out</h4></Link>
                             :
                             <Link to='/login'><h4 className="text-green-900 font-bold text-lg hover:underline cursor-pointer">Login</h4></Link>
                         }
@@ -78,15 +78,15 @@ const Navbar = () => {
                             
                         </div>
                     </label>
-                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                        <li>
-                            <a className="justify-between">
-                                Profile
-                                <span className="badge">New</span>
-                            </a>
-                        </li>
-                        <li><a>Settings</a></li>
-                        <li><a>My Cart</a></li>
+                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-white rounded-box w-52">
+                        
+                        
+                        <li><NavLink className="text-[#343434] font-semibold text-base" to='/invoice'>My Invoice</NavLink></li>
+                        <li>{
+                            user ? <Link onClick={handdleLogout} to='/login'><h4 className="text-green-900 md:block font-bold text-lg hover:underline cursor-pointer">Log out</h4></Link>
+                            :
+                            <Link to='/login'><h4 className="text-green-900 font-bold text-lg hover:underline cursor-pointer">Login</h4></Link>
+                            }</li>
                     </ul>
                 </div>
                        
