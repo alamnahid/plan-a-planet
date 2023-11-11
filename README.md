@@ -67,17 +67,17 @@ Welcome to Plan A Plant, a plant e-commerce website where users can explore a va
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/plan-a-plant.git
+   git clone https://github.com/alamnahid/plan-a-planet.git
    cd plan-a-plant
 
 2. Install dependencies:
 
    ```bash
-      npm install
+   npm install
 
 3. Configure environment variables:
 
    ```bash
-      Create a .env file in the root directory and add the necessary configuration variables.
+   Create a .env file in the root directory and add the necessary configuration variables.
 
 ![sssss1](https://github.com/alamnahid/plan-a-planet/assets/138557372/cd75449b-5598-4e3a-b3e5-4d3d4c11584d)
