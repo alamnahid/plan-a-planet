@@ -12,6 +12,9 @@ const Invoice = () => {
 
     const [orderData, setOrderData] = useState([])
     const {user} = useContext(AuthContext)
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     
 
     const url = `https://plan-a-plant-server.vercel.app/order?email=${user?.email}`
@@ -49,7 +52,7 @@ const Invoice = () => {
             <div className="pt-20">
             {
                 orderData?.map(plant=>
-                <section key={plant._id} className="fordownload py-20 bg-[#F0F5F0]">
+                <section key={plant._id} className="fordownload printable-section md:py-20 bg-[#F0F5F0]">
                 <div className="max-w-5xl mx-auto py-16 bg-white">
                  <article className="overflow-hidden">
                   <div className="bg-[white] rounded-b-md">

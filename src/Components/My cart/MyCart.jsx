@@ -13,6 +13,9 @@ const MyCart = () => {
     const time = moment().format('MMMM Do YYYY, h:mm');
     // console.log(user)
     const navigate = useNavigate();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     const [itemname, setItemName] = useState('')
     const [itemPrice, setItemPrice] = useState(0)

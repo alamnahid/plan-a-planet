@@ -7,6 +7,9 @@ const CategorieShop = () => {
     const plantsloaderData = useLoaderData();
     const [showData, setShowData] = useState(plantsloaderData.slice(0, 10))
     const { name } = useParams()
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     // console.log(name.toLowerCase())
     // console.log(plantsloaderData)
     // console.log(plantsloaderData[4].category.toLowerCase())
@@ -47,7 +50,7 @@ const CategorieShop = () => {
 
                                 <h1 className="text-[#343434] font-semibold mt-3 text-xs md:text-lg">{plant?.name}</h1>
                                 <h1 className="text-[#343434] text-xs  md:text-xl">$ {plant?.price}</h1>
-                                <Link to={`/productdetails/${plant._id}`}><button className="capitalizeh-8 h-8 md:h-16 w-full bg-[#3B823E] px-5 text-white font-semibold  md:text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop Now</button></Link>
+                                <Link to={`/productdetails/${plant._id}`}><button className="capitalizeh-8 h-8 md:h-16 w-full bg-[#3B823E] md:px-5 text-white font-semibold text-xs  md:text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop Now</button></Link>
                             </div>)
                         }
 

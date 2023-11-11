@@ -1,0 +1,502 @@
+[
+    {
+        "_id": "654e0a3d8a163efefc6175a7",
+        "name": "String of Hearts",
+        "photo": "https://i.ibb.co/F0bQJ56/growing-string-of-heart-plants-5086828-5-3d7f39180e6b41c59a44874a60301ae5.jpg",
+        "category": "Flower Plants",
+        "producttype": "Creepers",
+        "price": "50",
+        "description": "Trailing succulent with heart-shaped leaves, perfect for indoors.",
+        "rating": "4.6",
+        "hotsale": "hotsale",
+        "previousprice": "56"
+    },
+    {
+        "_id": "654e0caf8a163efefc6175aa",
+        "name": "Fiddle Leaf Fern",
+        "photo": "https://i.ibb.co/yq9q03D/Fiddle-Leaf-Fern.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Gifting",
+        "price": "48",
+        "description": "Air-purifying fern with fiddle-shaped leaves for a touch of elegance.",
+        "rating": "4.9",
+        "hotsale": "hotsale",
+        "previousprice": "56"
+    },
+    {
+        "_id": "654e09da8a163efefc6175a6",
+        "name": "Chrysanthemum",
+        "photo": "https://i.ibb.co/Dgxgw0f/shutterstock-380519311.jpg",
+        "category": "Flower Plants",
+        "producttype": "Seeds",
+        "price": "41",
+        "description": "Colorful chrysanthemum flowers to add variety to your garden.",
+        "rating": "4.6",
+        "hotsale": "hotsale",
+        "previousprice": "45"
+    },
+    {
+        "_id": "654e0e0a8a163efefc6175ad",
+        "name": "String of Bananas",
+        "photo": "https://i.ibb.co/wLVsYMR/download-4.jpg",
+        "category": "Flower Plants",
+        "producttype": "Creepers",
+        "price": "40",
+        "description": "Trailing succulent with banana-shaped leaves for a playful look.",
+        "rating": "4.5",
+        "hotsale": "hotsale",
+        "previousprice": "45"
+    },
+    {
+        "_id": "654e0d718a163efefc6175ac",
+        "name": "Moss Rose",
+        "photo": "https://i.ibb.co/Ch9D8Ss/Moss-Rose.jpg",
+        "category": "Flower Plants",
+        "producttype": "Seeds",
+        "price": "38",
+        "description": "Beautiful and low-maintenance moss rose flowers grown from seeds.",
+        "rating": "4.4",
+        "hotsale": "hotsale",
+        "previousprice": "49"
+    },
+    {
+        "_id": "654e0edd8a163efefc6175ae",
+        "name": "Nayantara",
+        "photo": "https://i.ibb.co/G3TFt8W/Getty-Images-1366343015-d00ff618ffe1463e840366cdc286315c.jpg",
+        "category": "Flower Plants",
+        "producttype": "Gifting",
+        "price": "34",
+        "description": "Colorful nayantara flowers in a potted plant, perfect for gifting.",
+        "rating": "4.6",
+        "hotsale": "hotsale",
+        "previousprice": "40"
+    },
+    {
+        "_id": "654e0a888a163efefc6175a8",
+        "name": "Lucky Bamboo",
+        "photo": "https://i.ibb.co/VxC3ddz/Lucky-Bamboo.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Gifting",
+        "price": "31",
+        "description": "Symbol of good luck, easy-to-care-for bamboo for gifting.",
+        "rating": "4.5",
+        "hotsale": "hotsale",
+        "previousprice": "34"
+    },
+    {
+        "_id": "654e0ae58a163efefc6175a9",
+        "name": "Cactus Mix Seeds",
+        "photo": "https://i.ibb.co/MZ89PT2/Cactus-Mix-Seeds.jpg",
+        "category": "Flower Plants",
+        "producttype": "Succulents",
+        "price": "30",
+        "description": "Assorted cactus seeds for a diverse and unique succulent collection.",
+        "rating": "4.9",
+        "hotsale": "hotsale",
+        "previousprice": "38"
+    },
+    {
+        "_id": "654e099c8a163efefc6175a5",
+        "name": "Fern Cactus",
+        "photo": "https://i.ibb.co/0V9k4PJ/Fern-Leaf-Cactus.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Gifting",
+        "price": "28",
+        "description": "Unusual cactus with fern-like leaves, a perfect gift for plant lovers.",
+        "rating": "4.4",
+        "hotsale": "hotsale",
+        "previousprice": "34"
+    },
+    {
+        "_id": "654c9dc1487e010cb6a978c9",
+        "name": "5Pcs Banyan Seeds",
+        "photo": "https://i.ibb.co/fH9PzL0/a0c67e07bd20876895c634336f8ed8b2.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Bonsai",
+        "price": 98,
+        "description": "5Pcs Banyan Seeds Chinese Rare Ficus Microcarpa Tree Bonsai Ginseng Banyan Garden Tree Outdoor Planters",
+        "rating": "4.6"
+    },
+    {
+        "_id": "654c9e19487e010cb6a978ca",
+        "name": "Purifier Bonsai Tree",
+        "photo": "https://i.ibb.co/vzQ5RKX/61a-DPOQP-BL-AC-UF1000-1000-QL80.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Bonsai",
+        "price": 97,
+        "description": "Abana Homes Bonsai Live Plants Ulmus - Purifier Bonsai Tree For Home With Pot",
+        "rating": "4.6"
+    },
+    {
+        "_id": "654c9f2e487e010cb6a978cc",
+        "name": "Pegasus Flora",
+        "photo": "https://i.ibb.co/jVYYKd4/516-NLFGLKb-L-AC-UF350-350-QL50.jpg",
+        "category": "Indoor Plants",
+        "producttype": "Cactus",
+        "price": 95,
+        "description": "CAPPL Live Cactus Plants Small Quantity-5 Plants (Small Cactus) : Amazon.in: Garden & Outdoors",
+        "rating": "4.8"
+    },
+    {
+        "_id": "654ca065487e010cb6a978d2",
+        "name": "Indoor Cactus",
+        "photo": "https://i.ibb.co/wWqFJN1/download-1.jpg",
+        "category": "Indoor Plants",
+        "producttype": "Cactus",
+        "price": 88,
+        "description": "Be it barrelled, bunny-eared or moon-shaped, a little water and your brightest room can help an indoor cactus flourish",
+        "rating": "4.7"
+    },
+    {
+        "_id": "654ca033487e010cb6a978d1",
+        "name": "Indoor Cactus",
+        "photo": "https://i.ibb.co/HnJ0BBL/Cactus-House-Plants-Water-Requirements.jpg",
+        "category": "Indoor Plants",
+        "producttype": "Cactus",
+        "price": 86,
+        "description": "Modern Plants Live Cactus Succulent Mix - Bunch Of 6 Mix Charming Plants With Pot : Amazon.in: Garden & Outdoors",
+        "rating": "4.7"
+    },
+    {
+        "_id": "654c9b7d487e010cb6a978c2",
+        "name": "Bonsai Tree",
+        "photo": "https://i.ibb.co/wgfGzxW/74203450.jpg",
+        "category": "Indoor Plants",
+        "producttype": "Bonsai",
+        "price": 78,
+        "description": "Bonsai Tree: A fascinating sculptural plant for your garden ",
+        "rating": "4.6"
+    },
+    {
+        "_id": "654c9c0b487e010cb6a978c4",
+        "name": "Ficus Bonsai Plant",
+        "photo": "https://i.ibb.co/q1kDyjP/61-74-Et7c-CL-AC-UF1000-1000-QL80.jpg",
+        "category": "Indoor Plants",
+        "producttype": "Bonsai",
+        "price": 78,
+        "description": "Ficus Bonsai Plant for Home Indoor Live in Black Ceramic Pot - Natural Bonsai",
+        "rating": "4.8"
+    },
+    {
+        "_id": "654e0d228a163efefc6175ab",
+        "name": "Bonsai Tree",
+        "photo": "https://i.ibb.co/ZSXzz3w/Bonsai-Tree.jpg",
+        "category": "Indoor Plants",
+        "producttype": "Gifting",
+        "price": 78,
+        "description": "Miniature bonsai tree, a unique and thoughtful gift for plant enthusiasts.",
+        "rating": "4.4",
+        "hotsale": "hotsale",
+        "previousprice": "300"
+    },
+    {
+        "_id": "654c9d59487e010cb6a978c7",
+        "name": "Bonsai Juniper Seeds",
+        "photo": "https://i.ibb.co/tz9DKFV/70d05c1261ebb37b4dd901a4ba3f1641.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Bonsai",
+        "price": 70,
+        "description": "Ficus Bonsai, Also known as the common Fig and Chinese Banyan, this bonsai tree grows naturally in Southwest Asia.",
+        "rating": "4.9"
+    },
+    {
+        "_id": "654c9c31487e010cb6a978c5",
+        "name": "Ficus DIY Bonsai Tree",
+        "photo": "https://i.ibb.co/g6c4J9t/Ficus-Bonsai-Tree-Kit-M-DIY-Bonsai.webp",
+        "category": "Indoor Plants",
+        "producttype": "Bonsai",
+        "price": 69,
+        "description": "Ficus Bonsai Plant for Home Indoor Live in Black Ceramic Pot - Natural Bonsai",
+        "rating": "4.8"
+    },
+    {
+        "_id": "654c9f67487e010cb6a978cd",
+        "name": "Flower Cactus",
+        "photo": "https://i.ibb.co/nBDfzsh/cacti-pink-flowers-f3243ea1-bf52390b85a24a0eb468d429ed69d5c3.jpg",
+        "category": "Indoor Plants",
+        "producttype": "Cactus",
+        "price": 66,
+        "description": "CAPPL Live Cactus Plants Small Quantity-5 Plants (Small Cactus) : Amazon.in: Garden & Outdoors",
+        "rating": "4.8"
+    },
+    {
+        "_id": "654c9ffb487e010cb6a978d0",
+        "name": "Christmas Cactus",
+        "photo": "https://i.ibb.co/drFXKHt/dreamstime-l-107609668-1080x675.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Cactus",
+        "price": 66,
+        "description": "Modern Plants Live Cactus Succulent Mix - Bunch Of 6 Mix Charming Plants With Pot : Amazon.in: Garden & Outdoors",
+        "rating": "4.8"
+    },
+    {
+        "_id": "654c9fa5487e010cb6a978ce",
+        "name": " Cactus Succulent Mix",
+        "photo": "https://i.ibb.co/JHbp1wR/51-h-Y6-Ikf5-L-AC-UF1000-1000-QL80.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Cactus",
+        "price": 59,
+        "description": "Modern Plants Live Cactus Succulent Mix - Bunch Of 6 Mix Charming Plants With Pot : Amazon.in: Garden & Outdoors",
+        "rating": "4.8"
+    },
+    {
+        "_id": "654c9fce487e010cb6a978cf",
+        "name": "Green cactus",
+        "photo": "https://i.ibb.co/3yY4jPv/photo-1615669527499-501446dd48e1.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Cactus",
+        "price": 58,
+        "description": "Modern Plants Live Cactus Succulent Mix - Bunch Of 6 Mix Charming Plants With Pot : Amazon.in: Garden & Outdoors",
+        "rating": "4.8"
+    },
+    {
+        "_id": "654e04d1f204c71d3cf3d697",
+        "name": "Monstera Deliciosa",
+        "photo": "https://i.ibb.co/vDGXY7W/monstera-shoot-pink.webp",
+        "category": "Air Purifying Plants",
+        "producttype": "Gifting",
+        "price": 57,
+        "description": "Large and trendy indoor plant with distinctive split leaves.",
+        "rating": "4.6"
+    },
+    {
+        "_id": "654c9ef4487e010cb6a978cb",
+        "name": "23 Cactus Plants",
+        "photo": "https://i.ibb.co/D8cjH1Y/floweringcactusplants-header-1600x1067.jpg",
+        "category": "Indoor Plants",
+        "producttype": "Cactus",
+        "price": 56,
+        "description": "CAPPL Live Cactus Plants Small Quantity-5 Plants (Small Cactus) : Amazon.in: Garden & Outdoors",
+        "rating": "4.8"
+    },
+    {
+        "_id": "654e077af204c71d3cf3d69c",
+        "name": "Areca Palm",
+        "photo": "https://i.ibb.co/YX7Scr7/Areca-Palm.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Succulents",
+        "price": 56,
+        "description": "Air-purifying palm plant with feathery fronds.",
+        "rating": "4.3"
+    },
+    {
+        "_id": "654e040ef204c71d3cf3d694",
+        "name": "Boston Fern",
+        "photo": "https://i.ibb.co/TwgMx2q/Boston-Fern.jpg",
+        "category": "Indoor Plants",
+        "producttype": "Creepers",
+        "price": 55,
+        "description": "Lush and feathery indoor fern that adds a touch of greenery.",
+        "rating": "4.2"
+    },
+    {
+        "_id": "654e07e7f204c71d3cf3d69d",
+        "name": "Carnation",
+        "photo": "https://i.ibb.co/ygWtjMg/Carnation.jpg",
+        "category": "Flower Plants",
+        "producttype": "Seeds",
+        "price": 54,
+        "description": "Classic carnations for a touch of elegance in your garden.",
+        "rating": "4.6"
+    },
+    {
+        "_id": "654c9bd3487e010cb6a978c3",
+        "name": "Bonsai- Jade Plant",
+        "photo": "https://i.ibb.co/SVwmD6w/Bonsai-Jade-Plant.jpg",
+        "category": "Indoor Plants",
+        "producttype": "Bonsai",
+        "price": 50,
+        "description": "Make excellent specimens for bonsai due to their low maintenance and distinct appearance.",
+        "rating": "4.8"
+    },
+    {
+        "_id": "654c9c7f487e010cb6a978c6",
+        "name": "Bonsai Maple",
+        "photo": "https://i.ibb.co/vBznBrq/Bonsai-1.jpg",
+        "category": "Indoor Plants",
+        "producttype": "Bonsai",
+        "price": 49,
+        "description": "Ficus Bonsai Plant for Home Indoor Live in Black Ceramic Pot - Natural Bonsai",
+        "rating": "4.8"
+    },
+    {
+        "_id": "654c9d95487e010cb6a978c8",
+        "name": "Bonsai Tree",
+        "photo": "https://i.ibb.co/XWG5w5m/1b4a67079a70f0e3b7f70aa65738db88.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Bonsai",
+        "price": 45,
+        "description": "Mini Creative Bonsai Tree Artificial Plant Decoration Not Faded No Watering Potted for Office Home",
+        "rating": "4.9"
+    },
+    {
+        "_id": "654e048bf204c71d3cf3d696",
+        "name": "Daisy",
+        "photo": "https://i.ibb.co/qRrMC7H/Daisy.jpg",
+        "category": "Flower Plants",
+        "producttype": "Seeds",
+        "price": 45,
+        "description": "Delicate daisies to brighten up your garden when grown from seeds.",
+        "rating": "4.9"
+    },
+    {
+        "_id": "654e06caf204c71d3cf3d69b",
+        "name": "Philodendron",
+        "photo": "https://i.ibb.co/8bYKQj8/Philodendron.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Creepers",
+        "price": 45,
+        "description": "Heart-shaped leaves make this indoor plant a favorite.",
+        "rating": "4.3"
+    },
+    {
+        "_id": "654dfe9f1e751b7e8495ee75",
+        "name": "Peace Lily",
+        "photo": "https://i.ibb.co/TgX06b2/Peace-Lily.jpg",
+        "category": "Indoor Plants",
+        "producttype": "Creepers",
+        "price": 36,
+        "description": "A beautiful indoor plant with air-purifying qualities.",
+        "rating": "4.6"
+    },
+    {
+        "_id": "654dfef11e751b7e8495ee76",
+        "name": "Snake Plant",
+        "photo": "https://i.ibb.co/LvKGdxd/download-2.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Succulents",
+        "price": 34,
+        "description": "Low-maintenance succulent known for its air-purifying properties.",
+        "rating": "4.6"
+    },
+    {
+        "_id": "654dff7f0ae9bed7b987bb4d",
+        "name": "Fiddle Leaf Fig",
+        "photo": "https://i.ibb.co/0FJ6Ffc/Fiddle-Leaf-Fig.webp",
+        "category": "Indoor Plants",
+        "producttype": "Creepers",
+        "price": 34,
+        "description": "An elegant indoor plant with large, fiddle-shaped leaves.",
+        "rating": "4.8"
+    },
+    {
+        "_id": "654e03c0f204c71d3cf3d693",
+        "name": "Rosemary",
+        "photo": "https://i.ibb.co/xSD0V03/Rosemary-720x.webp",
+        "category": "Flower Plants",
+        "producttype": "Seeds",
+        "price": 34,
+        "description": "A fragrant herb to grow in your garden with these seeds.",
+        "rating": "4.8"
+    },
+    {
+        "_id": "654e05c0f204c71d3cf3d698",
+        "name": "Spider Orchid",
+        "photo": "https://i.ibb.co/zPgfxzV/Spider-Orchid.jpg",
+        "category": "Flower Plants",
+        "producttype": "Gifting",
+        "price": 34,
+        "description": "Exotic orchid perfect for gifting, resembling a delicate spider.",
+        "rating": "4.5"
+    },
+    {
+        "_id": "654e081af204c71d3cf3d69e",
+        "name": "String of Pearls",
+        "photo": "https://i.ibb.co/t2ZdFsf/String-of-Pearls.jpg",
+        "category": "Flower Plants",
+        "producttype": "Creepers",
+        "price": 34,
+        "description": "Unique trailing succulent with bead-like leaves",
+        "rating": "4.6"
+    },
+    {
+        "_id": "654e068ff204c71d3cf3d69a",
+        "name": "Morning Glory",
+        "photo": "https://i.ibb.co/z4BTgVB/Morning-Glory.jpg",
+        "category": "Flower Plants",
+        "producttype": "Succulents",
+        "price": 27,
+        "description": "Vibrant morning glory flowers to enhance your garden.",
+        "rating": "4.3"
+    },
+    {
+        "_id": "654e0337d48b10d45e70527a",
+        "name": "Rubber Plant",
+        "photo": "https://i.ibb.co/5FVLF8Q/grow-care-elastic-ficus-rubber-small-variegated-getty-0623-abbd86ab7eba4862805f7ab44ff32a55.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Gifting",
+        "price": 25,
+        "description": "A stylish and hardy air-purifying plant perfect for gifting.",
+        "rating": "4.4"
+    },
+    {
+        "_id": "654e038cf204c71d3cf3d692",
+        "name": "Zebra Plant",
+        "photo": "https://i.ibb.co/YXPqXr2/Zebra-Plant.jpg",
+        "category": "Indoor Plants",
+        "producttype": "Succulents",
+        "price": 24,
+        "description": "Unique succulent with striking zebra-like patterns on its leaves.",
+        "rating": "4.8"
+    },
+    {
+        "_id": "654dff2d1e751b7e8495ee77",
+        "name": "Lavender",
+        "photo": "https://i.ibb.co/mJsk8WS/Lavender.jpg",
+        "category": "Indoor Plants",
+        "producttype": "Seeds",
+        "price": 23,
+        "description": "Grow your own fragrant lavender with these seeds.",
+        "rating": "4.8"
+    },
+    {
+        "_id": "654dffd40ae9bed7b987bb4e",
+        "name": "Spider Plant",
+        "photo": "https://i.ibb.co/s66LV3h/BHG-spider-plant-c0e0fdd5ec6e4c1588998ce3167f6579.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Gifting",
+        "price": 23,
+        "description": "An excellent choice for gifting with its unique look.",
+        "rating": "4.3"
+    },
+    {
+        "_id": "654e0443f204c71d3cf3d695",
+        "name": "Money Plant",
+        "photo": "https://i.ibb.co/VxMgckR/2048x1365-Pilea-Peperomioides-SEO-Getty-Images-1225860485-79b134d.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Succulents",
+        "price": 23,
+        "description": "Bring good fortune with this easy-to-care-for money plant.",
+        "rating": "4.2"
+    },
+    {
+        "_id": "654e0642f204c71d3cf3d699",
+        "name": "Bamboo Palm",
+        "photo": "https://i.ibb.co/FVHrGp1/image-a8356bed-f5ac-4de5-b048-b00c31a1633d.webp",
+        "category": "Air Purifying Plants",
+        "producttype": "Creepers",
+        "price": 23,
+        "description": "Graceful indoor palm with bamboo-like stems, easy to care for.",
+        "rating": "4.9"
+    },
+    {
+        "_id": "654e000f0ae9bed7b987bb4f",
+        "name": "Aloe Vera",
+        "photo": "https://i.ibb.co/tqW3hd3/download-3.jpg",
+        "category": "Air Purifying Plants",
+        "producttype": "Succulents",
+        "price": 18,
+        "description": "Succulent known for its healing properties and air-purifying ability.",
+        "rating": "4.5"
+    },
+    {
+        "_id": "654e004b0ae9bed7b987bb50",
+        "name": "Sunflower",
+        "photo": "https://i.ibb.co/Rc0rHTY/bouquet-sunflower.webp",
+        "category": "Indoor Plants",
+        "producttype": "Seeds",
+        "price": 17,
+        "description": "Bright and cheerful sunflowers to adorn your garden.",
+        "rating": "4.5"
+    }
+]

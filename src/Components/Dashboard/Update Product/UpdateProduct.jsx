@@ -3,6 +3,9 @@ import { Link, useLoaderData } from "react-router-dom";
 
 
 const UpdateProduct = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     // const plantData = useLoaderData()
     const [plantData, setShowData] = useState([])
     const [search, setSearch] = useState('')

@@ -43,11 +43,11 @@ const HotSale = () => {
                         <h1 className="text-[#343434] font-semibold mt-3  text-xs md:text-xl">{item?.name}</h1>
                         <div className="flex gap-2 items-center">
                             <h1 className="text-[#343434] md:text-xl">$ {item?.price}</h1>
-                            <h1 className="text-[#D11F1F]  md:text-xl">$ <del>{item?.price}</del></h1>
+                            <h1 className="text-[#D11F1F]  md:text-xl">$ <del>{item?.price * 1.25}</del></h1>
                         </div>
 
 
-                        <Link to={`/productdetails/${item._id}`}><button className="capitalize h-8 md:h-14 w-full bg-[#3B823E] px-5 text-white font-semibold md:text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop Now</button></Link>
+                        <Link to={`/productdetails/${item._id}`}><button className="capitalize h-8 md:h-14 w-full bg-[#3B823E] md:px-5 text-white font-semibold text-xs md:text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop Now</button></Link>
 
 
                     </div>)

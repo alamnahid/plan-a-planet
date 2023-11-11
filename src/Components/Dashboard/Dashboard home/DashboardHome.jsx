@@ -4,9 +4,13 @@ import UserInfo from "./UserInfo";
 import UserProfile from "./UserProfile";
 import DashboardCardContainer from "./DashboardCardContainer";
 import UserMessages from "./UserMessages";
+import { useEffect } from "react";
 
 
 const DashboardHome = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     const allplants = useLoaderData()
     // console.log(allplants)
 

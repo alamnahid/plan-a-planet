@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import Swal from "sweetalert2";
 
 
 
 const AddProduct = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     const handleAddProduct = e => {
         e.preventDefault()
@@ -37,7 +41,7 @@ const AddProduct = () => {
                         showConfirmButton: false,
                         timer: 1500
                       })
-                    //   form.reset()
+                      form.reset()
 
                 }
             })

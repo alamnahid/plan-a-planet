@@ -148,9 +148,3 @@ button.print-button:hover .print-icon::after {
 }
 
 
-
-@media print {
-  navbar, footer {
-      display: none; /* Hide header and footer when printing */
-  }
-}

@@ -26,7 +26,7 @@ const BestSelling = () => {
                     bestselling?.map(sell=><div data-aos="fade-up" data-aos-delay="200" key={sell.id} className="w-[22rem] px-5 pt-5 pb-4 h-[25rem] rounded-2xl bg-white">
                     <img src={sell.image} alt="" />
 
-                    <Link to={`/categorieshop/${sell.name}`}><button className="capitalize h-14 w-full bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop Now</button></Link>
+                    <Link to={`/categorieshop/${sell.name}`}><button className="capitalize h-14 w-full bg-[#3B823E] md:px-5 text-white font-semibold md:text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop Now</button></Link>
 
 
                 </div>)

@@ -7,13 +7,16 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import Swal from "sweetalert2";
 import axios from "axios";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../AuthContest/AuthProvider";
 
 const Signup = () => {
     const { createUser, googleSignIn, handleUpdateProfile, user } = useContext(AuthContext);
     const location = useLocation()
     const navigate = useNavigate()
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     const handleSignUp = (e) => {
         e.preventDefault();
@@ -87,11 +90,11 @@ const Signup = () => {
 
     return (
         <div>
-            <div className="">
+            <div className="pt-20">
 
             </div>
 
-            <div className="flex  flex-col-reverse lg:flex-row justify-center items-center my-20 gap-16 p-3 lg:p-0">
+            <div className="flex  flex-col-reverse lg:flex-row justify-center items-center md:my-20 gap-16 p-3 lg:p-0">
                 <div>
                     <img className="rounded-xl" src="https://i.ibb.co/L8SG9vr/hr-Mdhw3fl-V.gif" alt="" />
                 </div>

@@ -1,11 +1,14 @@
 import { NavLink, Outlet } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../AuthContest/AuthProvider";
 
 
 const DashboardMain = () => {
     const {user} = useContext(AuthContext)
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     // console.log(user)
     return (
         <div className="bg-[#F0F5F0]" >
@@ -41,7 +44,7 @@ const DashboardMain = () => {
 
                         <li><NavLink className="border-2 text-white font-bold hover:bg-gray-700" to='/dashboard/dashboardhome'>Dashboard Home</NavLink></li>
                         <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-700" to='/dashboard/addproduct'>Add Product</NavLink></li>
-                        <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-700" to='/dashboard/hotsale'>Add Hote Sale Product</NavLink></li>
+                        <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-700" to='/dashboard/hotsale'>Add Hot Sale Product</NavLink></li>
                         <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-700" to='/dashboard/updateproduct'>Update Product</NavLink></li>
                         <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-700" to='/dashboard/deleteproduct'>Delete Product</NavLink></li>
                        

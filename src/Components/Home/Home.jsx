@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BestSelling from "./Best Selling/BestSelling";
 import Blog from "./Blog/Blog";
 import CoverHome from "./CoverHome/CoverHome";
@@ -11,6 +12,9 @@ import TradingPlants from "./Treding Plants/TradingPlants";
 
 
 const Home = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <div>
             <CoverHome></CoverHome>

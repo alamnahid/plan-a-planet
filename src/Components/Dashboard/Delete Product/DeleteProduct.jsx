@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 
 const DeleteProduct = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     const plantData = useLoaderData()
     const [plants, setPlants] = useState(plantData)
     // console.log(plantData)

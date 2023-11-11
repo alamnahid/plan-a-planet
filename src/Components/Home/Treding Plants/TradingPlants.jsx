@@ -31,7 +31,7 @@ const TradingPlants = () => {
                         <h1 className="text-[#343434] text-lg md:text-xl">$ {item?.price}</h1>
 
 
-                        <Link to={`/productdetails/${item._id}`}><button className="capitalize h-12 md:h-14 w-full bg-[#3B823E] px-5 text-white font-semibold md:text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop Now</button></Link>
+                        <Link to={`/productdetails/${item._id}`}><button className="capitalize h-12 md:h-14 w-full bg-[#3B823E] md:px-5 text-white font-semibold text-xs md:text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop Now</button></Link>
 
 
                     </div>)

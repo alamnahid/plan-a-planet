@@ -10,7 +10,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import Swal from "sweetalert2";
 import axios from "axios";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../AuthContest/AuthProvider";
 
 const Login = () => {
@@ -18,6 +18,9 @@ const Login = () => {
     const navigate = useNavigate()
     // const [userlogin, setUserLogin] = useState({})
     // const {user} = useContext(AuthContext)
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     const {signIn, googleSignIn, user} = useContext(AuthContext);
     
@@ -84,10 +87,10 @@ const Login = () => {
 
     return (
         <div>
-            <div className="lg:pb-32">
+            <div className="pt-20">
 
             </div>
-            <div className="flex flex-col-reverse lg:flex-row justify-center items-center my-20 gap-16 p-3 lg:p-0">
+            <div className="flex flex-col-reverse lg:flex-row justify-center items-center md:my-20 gap-16 p-3 lg:p-0">
                 <div>
                     <img className="rounded-xl" src="https://i.ibb.co/L8SG9vr/hr-Mdhw3fl-V.gif" alt="" />
                 </div>

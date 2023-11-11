@@ -1,10 +1,13 @@
 /* eslint-disable react/no-unknown-property */
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import logo from "../../assets/logo/logo.png"
 import { AuthContext } from "../AuthContest/AuthProvider";
 import Swal from "sweetalert2";
 
 const Contact = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     const {user} = useContext(AuthContext);
     // console.log(user)
@@ -49,7 +52,7 @@ const Contact = () => {
 
             <div>
 
-                <img className="w-[4.6rem] h-[5.6rem]" src={logo} alt="" />
+                <img className="w-[6.6rem] h-[5.6rem]" src={logo} alt="" />
                 <h1 className="mt-6  text-[#331A15] rancho text-xl md:text-[2.8rem] font-bold shadow-amber-950">Plan a Plant</h1>
 
                 <p className="my-8 text-[#1B1A1A] lg:w-[41rem] railway md:text-xl">

@@ -1,5 +1,5 @@
 
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import ProductDetailsAcordian from "./ProductDetailsAcordian";
 import Swal from "sweetalert2";
@@ -10,6 +10,9 @@ import FeatureProducts from "./FeatureProducts";
 
 const ProductDetails = () => {
     const {user} = useContext(AuthContext)
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     
     const [quantity, setQuantity] = useState(1);
     if (quantity < 0) {

@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 const Updates = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     const updateData = useLoaderData()
     console.log(updateData)
     const navigate = useNavigate();

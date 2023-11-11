@@ -2,9 +2,13 @@
 
 import { Link } from "react-router-dom";
 import MoreBlogs from "./MoreBlogs";
+import { useEffect } from "react";
 
 
 const Blogs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
     return (
         <div className="pt-20">
             

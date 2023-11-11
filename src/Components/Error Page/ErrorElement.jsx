@@ -1,10 +1,14 @@
 import { useRouteError } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import { useEffect } from "react";
 // import error from "../../assets/images/error.png"
 
 const ErrorElement = () => {
     const error = useRouteError();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     
     return (
         <div className="bg-white">

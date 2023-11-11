@@ -13,6 +13,9 @@ const Shop = () => {
     const [maxvalue, setMaxValue] = useState(100)
     const [search, setSearch] = useState('')
     // const [search, setSearch] = useState('')
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     const handleSearch = (e)=>{
         e.preventDefault();
@@ -177,7 +180,7 @@ const Shop = () => {
 
                                         <h1 className="text-[#343434] font-semibold mt-3 text-xs md:text-lg">{plant?.name}</h1>
                                         <h1 className="text-[#343434] text-xs md:text-xl">$ {plant?.price}</h1>
-                                        <Link to={`/productdetails/${plant._id}`}><button className="capitalize h-8 md:h-14 w-full bg-[#3B823E] px-5 text-white font-semibold md:text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop Now</button></Link>
+                                        <Link to={`/productdetails/${plant._id}`}><button className="capitalize h-8 md:h-14 w-full bg-[#3B823E] md:px-5 text-white font-semibold text-xs md:text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop Now</button></Link>
                                     </div>)
                                 }
 

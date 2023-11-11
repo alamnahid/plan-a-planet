@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import Swal from "sweetalert2";
 
 const AddHotSaleProduct = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     const handleAddProduct = e => {
         e.preventDefault()

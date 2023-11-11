@@ -69,26 +69,30 @@ const Navbar = () => {
                             <Link to='/login'><h4 className="text-green-900 font-bold text-lg hover:underline cursor-pointer">Login</h4></Link>
                         }
 
-                        <div className="dropdown dropdown-end ">
-                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                        <div className=" w-[2rem] rounded-full">
-                            {
-                                user?.photoURL && <img className="w-[2rem]" src={user.photoURL} />
-                            }
-                            
+                        {
+                            user && <div className="dropdown dropdown-end ">
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                <div className=" w-[2rem] rounded-full">
+                                    {
+                                        user?.photoURL ? <img className="w-[2rem]" src={user.photoURL} />
+                                        :
+                                        <img className="w-[150px] h-[150px] rounded-[50%]" src="https://i.ibb.co/HxyJjpB/png-transparent-male-man-person-business-avatar-icon.png"></img>
+                                    }
+                                    
+                                </div>
+                            </label>
+                            <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-white rounded-box w-52">
+                                
+                                
+                                <li><NavLink className="text-[#343434] font-semibold text-base" to='/invoice'>My Invoice</NavLink></li>
+                                <li className="block md:hidden">{
+                                    user ? <Link onClick={handdleLogout} to='/login'><h4 className="text-green-900 md:block font-bold text-lg hover:underline cursor-pointer">Log out</h4></Link>
+                                    :
+                                    <Link to='/login'><h4 className="text-green-900 font-bold text-lg hover:underline cursor-pointer">Login</h4></Link>
+                                    }</li>
+                            </ul>
                         </div>
-                    </label>
-                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-white rounded-box w-52">
-                        
-                        
-                        <li><NavLink className="text-[#343434] font-semibold text-base" to='/invoice'>My Invoice</NavLink></li>
-                        <li>{
-                            user ? <Link onClick={handdleLogout} to='/login'><h4 className="text-green-900 md:block font-bold text-lg hover:underline cursor-pointer">Log out</h4></Link>
-                            :
-                            <Link to='/login'><h4 className="text-green-900 font-bold text-lg hover:underline cursor-pointer">Login</h4></Link>
-                            }</li>
-                    </ul>
-                </div>
+                        }
                        
                     </div>
                 </div>
