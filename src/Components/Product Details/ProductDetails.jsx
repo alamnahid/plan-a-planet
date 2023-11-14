@@ -5,55 +5,57 @@ import ProductDetailsAcordian from "./ProductDetailsAcordian";
 import Swal from "sweetalert2";
 import { AuthContext } from "../AuthContest/AuthProvider";
 import FeatureProducts from "./FeatureProducts";
+import Zoom from "react-img-hover-zoom";
+
 
 
 
 const ProductDetails = () => {
-    const {user} = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
-    
+    }, []);
+
     const [quantity, setQuantity] = useState(1);
-    if (quantity < 0) {
-        setQuantity(0)
+    if (quantity < 1) {
+        setQuantity(1)
     }
 
     const plantdata = useLoaderData();
 
-    const {category, name, photo, price} = plantdata;
+    const { category, name, photo, price } = plantdata;
     const email = user?.email;
-   
-     const productInfo = {name, category, photo, price, quantity, email}
+
+    const productInfo = { name, category, photo, price, quantity, email }
 
     // console.log(quantity)
 
-    const handleaddToCart = ()=>{
-        fetch('https://plan-a-plant-server.vercel.app/cart',{
+    const handleaddToCart = () => {
+        fetch('https://plan-a-plant-server.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(productInfo)
         })
-        .then(res => res.json())
+            .then(res => res.json())
             .then(data => {
                 console.log(data);
-                
-                if(data.insertedId){
+
+                if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
                         text: 'Product Added cart Successfully',
                         icon: 'success',
                         confirmButtonText: 'Ok'
-                      })
+                    })
                 }
             })
 
     }
 
 
-    
+
 
 
     return (
@@ -61,7 +63,15 @@ const ProductDetails = () => {
 
             <div className="flex mx-[10%] gap-16 justify-center items-center flex-col xl:flex-row">
                 <div>
-                    <img className="w-[400px] rounded-3xl" src={plantdata?.photo} alt="" />
+
+                    <Zoom
+                        img={plantdata?.photo}
+                        zoomScale={2}
+                        width={400}
+                        height={400}
+                        className=" rounded-3xl"
+                    />
+
                 </div>
 
                 <div className="">
@@ -70,10 +80,10 @@ const ProductDetails = () => {
                         {
                             plantdata?.hotsale ? <div className="flex gap-3 items-center">
                                 <p className="text-xl mt-4 md:text-[2rem] text-[#343434]">$ {plantdata?.price}</p>
-                                <p className="text-xl mt-3 md:text-[2rem] text-[#ff0000]">$ <del>{plantdata?.price}</del></p>
+                                <p className="text-xl mt-3 md:text-[2rem] text-[#ff0000]"><del>${plantdata?.price}</del></p>
                             </div>
-                            :
-                            <p className="text-xl mt-4 md:text-[2rem] text-[#343434]">$ {plantdata?.price}</p>
+                                :
+                                <p className="text-xl mt-4 md:text-[2rem] text-[#343434]">$ {plantdata?.price}</p>
                         }
                     </div>
                     <p className="text-gray-500 mt-3 lg:w-[40rem] mb-7">{plantdata?.description}</p>
@@ -108,9 +118,9 @@ const ProductDetails = () => {
             <ProductDetailsAcordian></ProductDetailsAcordian>
 
             <FeatureProducts></FeatureProducts>
-            
 
-          
+
+
 
 
 

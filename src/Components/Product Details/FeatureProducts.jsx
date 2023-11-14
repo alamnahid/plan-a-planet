@@ -19,7 +19,7 @@ const FeatureProducts = () => {
              <div className="grid grid-cols-2 md:grid-cols-2 mt-8 justify-items-center items-center gap-8 lg:grid-cols-3 xl:grid-cols-5">
 
 {
-    product?.filter(item => item?.hotsale === 'hotsale').slice(0, 5).map(item => <div key={item._id} className="w-[40vw] md:w-[18rem] px-5 pt-5 pb-4 md:h-[24rem] rounded-2xl bg-white">
+    product?.filter(item => item?.hotsale === 'hotsale').slice(0, 5).map(item => <div key={item._id} className="w-[40vw] md:w-[18rem] px-5 pt-5 pb-4 md:h-[24rem] rounded-2xl bg-[#e7f5de]">
         <div className="relative">
             <img className="h-[100px] md:h-[12rem] w-[16rem] rounded-xl mx-auto" src={item?.photo} alt="" />
             <div className="absolute top-0 md:top-2 right-1 md:right-4">

@@ -161,12 +161,12 @@ const Shop = () => {
                         
 
                             <div className="flex justify-between items-center mt-12 gap-4 px-3">
-                            <button className="btn btn-success capitalize text-black font-bold text-xs md:text-lg" onClick={()=>setAsc(!asc)}>{asc ? 'Sort Price High to Low' : 'Sort Price Low to High'}</button>
+                            <button className="btn btn-success capitalize text-black font-bold text-xs md:text-lg bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700" onClick={()=>setAsc(!asc)}>{asc ? 'Sort Price High to Low' : 'Sort Price Low to High'}</button>
 
                             <form onSubmit={handleSearch} className="flex">
                             <input type="text" name="search" placeholder="Search Here" className="input input-bordered input-success w-full rounded-r-none max-w-xs bg-white" />
                             
-                            <input className="btn rounded-l-none  btn-success text-black capitalize text-lg" type="submit" value="search" />
+                            <input className="btn rounded-l-none  btn-success text-black capitalize text-lg bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700" type="submit" value="search" />
                             </form>
                             </div>
                             
@@ -175,7 +175,7 @@ const Shop = () => {
 
                                 {
                                     
-                                    showData?.map(plant => <div key={plant._id} className="w-[45vw] md:w-[18rem] cardss px-5 pt-5 pb-4 md:h-[24rem] rounded-2xl bg-white">
+                                    showData?.map(plant => <div key={plant._id} className="w-[45vw] md:w-[18rem] cardss px-5 pt-5 pb-4 md:h-[24rem] rounded-2xl bg-[#e7f5de]">
                                         <img className="h-[100px] md:h-[12rem] w-[16rem] rounded-xl mx-auto" src={plant?.photo} alt="" />
 
                                         <h1 className="text-[#343434] font-semibold mt-3 text-xs md:text-lg">{plant?.name}</h1>

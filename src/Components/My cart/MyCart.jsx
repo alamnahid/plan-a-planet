@@ -153,7 +153,7 @@ const MyCart = () => {
                                 <th className="text-[#343434] text-xs md:text-xl font-semibold">Delete</th>
                                 <th className="text-[#343434] text-xs md:text-xl font-semibold">Product Details</th>
                                 <th className="text-[#343434] text-xs md:text-xl font-semibold">Quantity</th>
-                                <th className="text-[#343434] text-xs md:text-xl font-semibold">Price</th>
+                                <th className="text-[#343434] text-xs md:text-xl font-semibold">Product Price</th>
                                 <th className="text-[#343434] text-xs md:text-xl font-semibold">Total</th>
                                 <th className="text-[#343434] text-xs md:text-xl font-semibold"></th>
                             </tr>
@@ -201,9 +201,9 @@ const MyCart = () => {
 
             </div>
 
-            <div className="bg-[#F0F5F0] w-full h-[20vh] md:pr-20 mt-16">
+            <div className="bg-[#FAFFF8] w-full h-[20vh] md:pr-20 mt-16">
 
-                <div className="w-[20rem] md:w-[30rem] bg-[#F0F5F0] float-right">
+                <div className="w-[20rem] md:w-[30rem] bg-[#FAFFF8] float-right">
                     <div className="flex justify-between items-center">
                         <p className="text-[#343434] text-xl">Subtotal</p>
                         <p className="text-[#343434] text-xl">$ {totalPrice}</p>
@@ -226,7 +226,7 @@ const MyCart = () => {
 
             </div>
 
-            <form className="w-full h-[55vh]" onSubmit={handleSubmit}>
+            <form className="w-full h-[65vh] pb-20" onSubmit={handleSubmit}>
                 <div className="w-[20rem] md:w-[35rem] md:pr-8 float-right">
 
                     <h1 className="mt-6 text-[#343434] text-2xl font-bold">Billing Details</h1>

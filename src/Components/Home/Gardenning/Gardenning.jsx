@@ -17,7 +17,7 @@ const Gardenning = () => {
                 <p className=" lg:w-[40vw] mt-4 text-[#343434] text-base lg:text-[1.5rem] ">Whether it is growing your own food or setting up your roof-top garden, we provide the highest quality landscaping services, contributing to a greener world and substantial living! Schedule your service appointment today! <br /> <br />
                 <span className="text-[#D11F1F] font-normal">*Service only available in Telangana and AndhraPradesh.</span></p>
 
-                <Link to="/shop"><button className="capitalize h-12 md:h-16 w-[18rem] bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-8 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop Now</button></Link>
+                <Link to="/shop"><button className="capitalize h-12 md:h-16 w-[18rem] bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-8 hover:bg-gradient-to-r from-teal-200 to-lime-200 focus:ring-lime-200 dark:focus:ring-teal-700 hover:text-black">Shop Now</button></Link>
             </div>
             <div data-aos="fade-down" data-aos-delay="200">
                 <img src={gardenning} alt="" />

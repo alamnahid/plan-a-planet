@@ -4,6 +4,8 @@ import logo from "../../assets/logo/logo.png"
 import { AuthContext } from "../AuthContest/AuthProvider";
 import Swal from "sweetalert2";
 
+
+
 const Contact = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -48,18 +50,18 @@ const Contact = () => {
 
     }
     return (
-        <div className="pt-20 flex flex-col lg:flex-row justify-between items-center lg:h-[51rem] px-[10%]">
+        <div className="pt-20 flex flex-col lg:flex-row justify-around items-center lg:h-[51rem] px-[10%]">
 
             <div>
 
-                <img className="w-[6.6rem] h-[5.6rem]" src={logo} alt="" />
-                <h1 className="mt-6  text-[#331A15] rancho text-xl md:text-[2.8rem] font-bold shadow-amber-950">Plan a Plant</h1>
+                <img className="w-[10.6rem] h-[5.6rem]" src={logo} alt="" />
+                
 
-                <p className="my-8 text-[#1B1A1A] lg:w-[41rem] railway md:text-xl">
+                <p className="my-8 text-[#1B1A1A] lg:w-[41rem] railway md:text-lg">
                 We offer a diverse selection of plants, from lush tropicals to elegant succulents, ensuring there's a plant for every style and space. 
                 </p>
 
-                <div className="flex items-center gap-5">
+                <div className="flex items-center gap-5 ">
                     <svg className="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                         <g clip-path="url(#clip0_24_21)">
                             <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.95434 0 3.05176e-05 8.9543 3.05176e-05 20C3.05176e-05 31.0457 8.95434 40 20 40Z" fill="#331A15" />
@@ -102,7 +104,7 @@ const Contact = () => {
 
                 </div>
 
-                <h1 className="mt-8  text-[#331A15] rancho text-xl md:text-[2.8rem] font-bold shadow-amber-950">Get in Touch</h1>
+                <h1 className="mt-8  text-[#331A15] rancho text-xl md:text-[2rem] font-bold shadow-amber-950">Get in Touch</h1>
 
                 <div className="mt-[2.37rem]">
                     <div className="flex gap-8">
@@ -110,7 +112,7 @@ const Contact = () => {
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 4.5C1.5 3.70435 1.81607 2.94129 2.37868 2.37868C2.94129 1.81607 3.70435 1.5 4.5 1.5H5.872C6.732 1.5 7.482 2.086 7.691 2.92L8.796 7.343C8.88554 7.701 8.86746 8.07746 8.74401 8.42522C8.62055 8.77299 8.39723 9.07659 8.102 9.298L6.809 10.268C6.674 10.369 6.645 10.517 6.683 10.62C7.24738 12.1549 8.1386 13.5487 9.29495 14.7051C10.4513 15.8614 11.8451 16.7526 13.38 17.317C13.483 17.355 13.63 17.326 13.732 17.191L14.702 15.898C14.9234 15.6028 15.227 15.3794 15.5748 15.256C15.9225 15.1325 16.299 15.1145 16.657 15.204L21.08 16.309C21.914 16.518 22.5 17.268 22.5 18.129V19.5C22.5 20.2956 22.1839 21.0587 21.6213 21.6213C21.0587 22.1839 20.2956 22.5 19.5 22.5H17.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" fill="#331A15" />
                         </svg>
 
-                        <p className="text-[#1B1A1A] railway md:text-xl">+88 01796281914</p>
+                        <p className="text-[#1B1A1A] railway md:text-lg">+88 01796281914</p>
                     </div>
 
                     <div className="flex gap-8 mt-4">
@@ -140,13 +142,13 @@ const Contact = () => {
                 <h1 className="  text-[#331A15] mt-3 rancho text-2xl md:text-[2.8rem] font-bold shadow-amber-950">Connect with Us</h1>
 
                 <form onSubmit={handleContactSubmit} className="mt-8 flex flex-col">
-                    <input className="w-full lg:w-[31rem] h-[3rem] rounded-md bg-white text-black placeholder:text-gray-700 pl-4" type="text" name="name" placeholder="Enter your name" id="" defaultValue={user?.displayName} required />
+                    <input className="w-full lg:w-[31rem] h-[3rem] rounded-md border-2 bg-white text-black placeholder:text-gray-700 pl-4" type="text" name="name" placeholder="Enter your name" id="" defaultValue={user?.displayName} required />
                     
-                    <input className="w-full lg:w-[31rem] mt-4 h-[3rem] rounded-md bg-white text-black placeholder:text-gray-700 pl-4" type="email" name="email" placeholder="Enter your Email" id="" defaultValue={user?.email} required />
+                    <input className="w-full lg:w-[31rem] border-2 mt-4 h-[3rem] rounded-md bg-white text-black placeholder:text-gray-700 pl-4" type="email" name="email" placeholder="Enter your Email" id="" defaultValue={user?.email} required />
                     
-                    <input className="lg:w-[31rem] mt-4 h-[8rem] rounded-md bg-white placeholder:text-gray-500 pl-4" type="text" name="message" placeholder="Enter Message" required id="" />
+                    <input className="lg:w-[31rem] border-2 mt-4 h-[8rem] rounded-md bg-white placeholder:text-gray-500 pl-4" type="text" name="message" placeholder="Enter Message" required id="" />
 
-                    <button type="submit" className="btn bg-green-700 border-none  text-white capitalize mt-6 w-[12.3rem] h-[4rem] rancho text-2xl">Send Message</button>
+                    <button type="submit" className="btn bg-green-700 border-none  text-white capitalize mt-6 w-[12.3rem] hover:text-black h-[4rem] rancho text-xl">Send Message</button>
 
                 </form>
 

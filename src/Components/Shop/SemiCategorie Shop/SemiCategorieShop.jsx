@@ -56,7 +56,7 @@ const SemiCategorieShop = () => {
 
 
                                 {
-                                    showData?.map(plant => <div key={plant._id} className="w-[40vw] md:w-[18rem] px-5 pt-5 pb-4 md:h-[24rem] rounded-2xl bg-white">
+                                    showData?.map(plant => <div key={plant._id} className="w-[40vw] md:w-[18rem] px-5 pt-5 pb-4 md:h-[24rem] rounded-2xl bg-[#e7f5de]">
                                         <img className="md:w-[15.1rem] h-[100px] md:h-[11rem] rounded-md" src={plant?.photo} alt="" />
 
                                         <h1 className="text-[#343434] font-semibold mt-3 text-xs md:text-lg">{plant?.name}</h1>

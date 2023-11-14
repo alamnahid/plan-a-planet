@@ -24,22 +24,22 @@ const TradingPlants = () => {
             <div className="grid grid-cols-2 md:grid-cols-2 mt-8 justify-items-center items-center gap-8 lg:grid-cols-3 xl:grid-cols-5 mx-[10%]">
 
                 {
-                    product?.filter(item=>item.hotsale!=='hotsale').slice(0, 10).map(item => <div data-aos="fade-down" data-aos-delay="200" key={item._id} className="w-[40vw] md:w-[18rem] px-5 pt-5 pb-4 md:h-[24rem] rounded-2xl bg-white">
-                        <img className="h-[100px] md:h-[12rem] w-[35vw] md:w-[16rem] rounded-xl mx-auto" src={item?.photo} alt="" />
+                    product?.filter(item=>item.hotsale!=='hotsale').slice(0, 10).map(item => <div data-aos="fade-down" data-aos-delay="200" key={item._id} className="w-[40vw] md:w-[18rem] px-5 pt-5 pb-4 md:h-[24rem] rounded-2xl bg-[#e7f5de] group">
+                        <img className="h-[100px] md:h-[12rem] w-[35vw] md:w-[16rem] rounded-xl mx-auto group-hover:scale-110 transition" src={item?.photo} alt="" />
 
                         <h1 className="text-[#343434] font-semibold mt-3  text-xs md:text-lg">{item?.name}</h1>
                         <h1 className="text-[#343434] text-lg md:text-xl">$ {item?.price}</h1>
 
 
-                        <Link to={`/productdetails/${item._id}`}><button className="capitalize h-12 md:h-14 w-full bg-[#3B823E] md:px-5 text-white font-semibold text-xs md:text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop Now</button></Link>
-
+                        <Link to={`/productdetails/${item._id}`}><button className="capitalize h-12 md:h-14 w-full md:px-5 font-semibold text-xs md:text-lg rounded-lg mt-4  
+                        bg-gradient-to-r from-teal-200 to-lime-100 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700">Shop Now</button></Link>
 
                     </div>)
                 }
             </div>
 
             <div className="text-center mt-12">
-                <Link to={`/shop`}><button className="capitalize h-10 md:h-14 w-[18rem] lg:w-[25rem] bg-[#3B823E] px-5 text-white font-semibold text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop All</button></Link>
+                <Link to={`/shop`}><button className="capitalize h-10 md:h-14 w-[18rem] lg:w-[25rem]  px-5 text-black font-semibold text-xl rounded-lg mt-4 bg-gradient-to-r from-teal-200 to-lime-100 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700">Shop All</button></Link>
             </div>
 
         </div>

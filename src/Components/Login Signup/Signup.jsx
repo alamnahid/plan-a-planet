@@ -100,24 +100,24 @@ const Signup = () => {
                 </div>
                 <div className="w-full bg-white p-3 lg:p-0 lg:w-[38rem] h-[57.5rem] rounded-xl border-2 border-[#D0D0D0]">
 
-                    <h1 className="text-[#444444] text-[2.5rem] font-semibold text-center mt-[4.6rem]">Sign Up</h1>
+                    <h1 className="text-[#444444] text-[2.5rem] font-semibold text-center mt-[3.6rem]">Sign Up</h1>
 
                     <form onSubmit={handleSignUp} className="mt-12">
-                        <p className="mt-[2.1rem] text-[#444444] lg:ml-[4.69rem] text-lg font-semibold">Name</p>
+                        <p className="mt-[1.1rem] text-[#444444] lg:ml-[4.69rem] text-lg font-semibold">Name</p>
 
                         <div className="rounded-2xl text-black mt-5 lg:mx-[4.69rem]">
                             <TextField className="w-full text-black lg:w-[28.8rem]   h-[3.75rem] rounded-2xl border-2 border-[#000000] outline-none placeholder:text-[#000000] pl-5 " id="outlined-basic" label="Your Name" name="name" variant="outlined" />
 
                         </div>
 
-                        <p className="mt-[2.1rem] text-[#444444] lg:ml-[4.69rem] text-lg font-semibold">Email</p>
+                        <p className="mt-[1.1rem] text-[#444444] lg:ml-[4.69rem] text-lg font-semibold">Email</p>
 
                         <div className="rounded-2xl text-black mt-5 lg:mx-[4.69rem]">
                             <TextField className="w-full text-black lg:w-[28.8rem]   h-[3.75rem] rounded-2xl border-2 border-[#000000] outline-none placeholder:text-[#000000] pl-5 " id="outlined-basic" label="Your Email" name="email" variant="outlined" type="email" required />
 
                         </div>
 
-                        <p className="mt-[2.1rem] text-[#444444] lg:ml-[4.69rem] text-lg font-semibold">Password</p>
+                        <p className="mt-[1.1rem] text-[#444444] lg:ml-[4.69rem] text-lg font-semibold">Password</p>
 
                         <div className="rounded-2xl text-black mt-5 lg:mx-[4.69rem]">
                             <TextField className="w-full text-black lg:w-[28.8rem]   h-[3.75rem] rounded-2xl border-2 border-[#000000] outline-none placeholder:text-[#000000] pl-5 " id="outlined-basic" label="Your Pasword" name="password" variant="outlined" type="password" required />

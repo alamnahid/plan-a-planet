@@ -2,7 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../AuthContest/AuthProvider";
-
+import { FaHome, FaPumpMedical, FaRupeeSign, FaAngleDoubleUp,FaRegTrashAlt    } from "react-icons/fa";
 
 const DashboardMain = () => {
     const {user} = useContext(AuthContext)
@@ -13,7 +13,7 @@ const DashboardMain = () => {
     return (
         <div className="bg-[#F0F5F0]" >
             <Navbar></Navbar>
-            <div className="drawer pt-28 bg-[#F0F5F0] lg:drawer-open">
+            <div className="drawer pt-28 xl:pt-8 bg-[#F0F5F0] lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle bg-[#F0F5F0]" />
                 <div className="drawer-content bg-[#F0F5F0] flex flex-col items-center justify-center">
                     
@@ -42,11 +42,11 @@ const DashboardMain = () => {
                         </div></li>
                         {/* Sidebar content here */}
 
-                        <li><NavLink className="border-2 text-white font-bold hover:bg-gray-700" to='/dashboard/dashboardhome'>Dashboard Home</NavLink></li>
-                        <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-700" to='/dashboard/addproduct'>Add Product</NavLink></li>
-                        <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-700" to='/dashboard/hotsale'>Add Hot Sale Product</NavLink></li>
-                        <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-700" to='/dashboard/updateproduct'>Update Product</NavLink></li>
-                        <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-700" to='/dashboard/deleteproduct'>Delete Product</NavLink></li>
+                        <li><NavLink className="border-2 text-white font-bold hover:bg-gray-700" to='/dashboard/dashboardhome'><FaHome/> Dashboard Home</NavLink></li>
+                        <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-200" to='/dashboard/addproduct'><FaPumpMedical/> Add Product</NavLink></li>
+                        <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-200" to='/dashboard/hotsale'><FaRupeeSign/> Add Hot Sale Product</NavLink></li>
+                        <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-200" to='/dashboard/updateproduct'><FaAngleDoubleUp /> Update Product</NavLink></li>
+                        <li><NavLink className="border-2 text-white font-bold mt-4 hover:bg-gray-200" to='/dashboard/deleteproduct'><FaRegTrashAlt /> Delete Product</NavLink></li>
                        
                     </ul>
 

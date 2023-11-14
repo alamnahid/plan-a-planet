@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 
 const Root = () => {
     return (
-        <div className="bg-[#F2F2F2] mont">
+        <div className="bg-[#FAFFF8] mont">
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
@@ -14,3 +14,5 @@ const Root = () => {
 };
 
 export default Root;
+
+//bg-[#F2F2F2]

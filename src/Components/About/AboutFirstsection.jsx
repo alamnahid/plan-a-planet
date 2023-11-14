@@ -6,7 +6,7 @@ const AboutFirstsection = () => {
         <div className="flex flex-col lg:flex-row gap-24 items-center lg:my-32 p-5 lg:p-0 lg:mx-[10%] mt-12">
         <div className="relative lg:w-1/2">
             <img className="w-3/4 rounded-xl " src="https://i.ibb.co/CvM1HWS/stock-photo-mother-and-daughter-working-in-the-garden-together.jpg" alt="" />
-            <img className="w-1/2 rounded-xl border-8 border-white absolute top-1/2 left-1/2 " src="https://i.ibb.co/pjBfk5S/closeup-one-hand-holding-small-plant-growing-out-soil-created-with-generative-ai-762026-38191.jpg" alt="" />
+            <img className="w-1/2 rounded-xl  absolute top-1/2 left-1/2 " src="https://i.ibb.co/pjBfk5S/closeup-one-hand-holding-small-plant-growing-out-soil-created-with-generative-ai-762026-38191.jpg" alt="" />
         </div>
         <div className="lg:w-1/2">
             <h1 className="text-[#FF3811] text-xl font-bold">About Us</h1>
@@ -16,7 +16,7 @@ const AboutFirstsection = () => {
            
            
             <p className="pr-6 text-justify mt-5 text-[#737373] text-base">Our journey began with a simple love for plants. We understood the joy and tranquility they bring to peoples lives. We set out with a vision to make quality plants and botanical products accessible to everyone, regardless of their gardening expertise.</p>
-            <button className="btn mt-7  bg-[#3B823E] border-none text-white text-lg capitalize font-medium w-[10.6rem] h-14">Get More Info</button>
+            <button className="btn mt-7  bg-[#3B823E] border-none text-white hover:text-black text-lg capitalize font-medium w-[10.6rem] h-14">Get More Info</button>
 
         </div>
     </div>
