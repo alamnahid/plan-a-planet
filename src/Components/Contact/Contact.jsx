@@ -24,7 +24,7 @@ const Contact = () => {
         const userMessageInfo = {name, email, message}
         // console.log(userMessageInfo)
        
-        fetch('https://plan-a-plant-server.vercel.app/contact', {
+        fetch('http://localhost:5000/contact', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

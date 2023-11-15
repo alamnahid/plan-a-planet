@@ -17,7 +17,7 @@ const Invoice = () => {
       }, []);
     
 
-    const url = `https://plan-a-plant-server.vercel.app/order?email=${user?.email}`
+    const url = `http://localhost:5000/order?email=${user?.email}`
 
     useEffect(() => {
         axios.get(url, { withCredentials: true })
@@ -228,12 +228,12 @@ const Invoice = () => {
 <div className="text-center flex justify-center items-center gap-6">
 
 
-<button onClick={handlePrint} className="btn btn-primary w-[12rem] text-white text-xl">Print</button>
+<button onClick={handlePrint} className="btn btn-primary w-[12rem] bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 text-black font-medium text-xl">Print</button>
 
 
 <div>
 
-<button onClick={handleDownload} className="btn btn-secondary w-[12rem] text-white text-xl">Download</button>
+<button onClick={handleDownload} className="btn btn-secondary w-[12rem] bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 text-black font-medium text-xl">Download</button>
 
 
 

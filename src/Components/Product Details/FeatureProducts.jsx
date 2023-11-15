@@ -7,7 +7,7 @@ const FeatureProducts = () => {
     const [product, setProduct] = useState([])
 
     useEffect(() => {
-        fetch('https://plan-a-plant-server.vercel.app/plants')
+        fetch('http://localhost:5000/plants')
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
@@ -22,21 +22,21 @@ const FeatureProducts = () => {
     product?.filter(item => item?.hotsale === 'hotsale').slice(0, 5).map(item => <div key={item._id} className="w-[40vw] md:w-[18rem] px-5 pt-5 pb-4 md:h-[24rem] rounded-2xl bg-[#e7f5de]">
         <div className="relative">
             <img className="h-[100px] md:h-[12rem] w-[16rem] rounded-xl mx-auto" src={item?.photo} alt="" />
-            <div className="absolute top-0 md:top-2 right-1 md:right-4">
+            <div className="absolute top-1 md:top-2 right-1 md:right-4">
 
-                <div className="relative">
-                    <img src={discount} alt="" />
-                    <h2 className="text-white text-[0.75rem] font-semibold absolute top-3 left-4">25%<br />Off</h2>
-                </div>
+                                <div className="relative w-[3.5rem] h-[3.5rem] rounded-[50%] bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700">
+                                    
+                                    <h2 className="text-black text-[0.75rem] font-bold absolute top-3 left-[1.2rem]">25%<br />Off</h2>
+                                </div>
 
 
-            </div>
+                            </div>
         </div>
 
         <h1 className="text-[#343434] font-semibold mt-3 text-xs md:text-xl">{item?.name}</h1>
         <div className="flex gap-2 items-center">
             <h1 className="text-[#343434] text-xs md:text-xl">$ {item?.price}</h1>
-            <h1 className="text-[#D11F1F] text-xs md:text-xl">$ <del>{item?.price}</del></h1>
+            <h1 className="text-[#D11F1F] text-xs md:text-xl"><del>${item?.price}</del></h1>
         </div>
 
 

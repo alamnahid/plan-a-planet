@@ -50,7 +50,7 @@ const MyCart = () => {
     // console.log(quantityofitem)
   
 
-    const url = `https://plan-a-plant-server.vercel.app/cart?email=${user?.email}`
+    const url = `http://localhost:5000/cart?email=${user?.email}`
 
 
 
@@ -73,7 +73,7 @@ const MyCart = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://plan-a-plant-server.vercel.app/cart/${id}`, {
+                fetch(`http://localhost:5000/cart/${id}`, {
                     method: 'DELETE'
 
                 })
@@ -114,7 +114,7 @@ const MyCart = () => {
 
         const orderInfo = {name, email, number, address, itemnames, itemprices, subtotal, totalprice, quantity, issuetime, itemtotalpric}
 
-        fetch('https://plan-a-plant-server.vercel.app/order',{
+        fetch('http://localhost:5000/order',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

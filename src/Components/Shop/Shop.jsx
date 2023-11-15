@@ -30,7 +30,7 @@ const Shop = () => {
 
 
     useEffect(()=>{
-        fetch(`https://plan-a-plant-server.vercel.app/plants?sort=${asc ? 'asc' : 'des'}&search=${search.toString()}`)
+        fetch(`http://localhost:5000/plants?sort=${asc ? 'asc' : 'des'}&search=${search.toString()}`)
         .then(res=>res.json())
         .then(data=>setShowData(data))
     }, [asc, search])
@@ -78,7 +78,7 @@ const Shop = () => {
     const [itemsPerPage, setItemsPerpage] = useState(15)
 
     useEffect(() => {
-        fetch('https://plan-a-plant-server.vercel.app/plantscount')
+        fetch('http://localhost:5000/plantscount')
             .then(res => res.json())
             .then(data => setTotalCount(data))
     }, [])
@@ -111,7 +111,7 @@ const Shop = () => {
 
     // apatotot
     useEffect(() => {
-        fetch(`https://plan-a-plant-server.vercel.app/plants?page=${currentPage}&size=${itemsPerPage}`)
+        fetch(`http://localhost:5000/plants?page=${currentPage}&size=${itemsPerPage}`)
             .then(res => res.json())
             .then(data => {
                 setShowData(data)
@@ -164,7 +164,7 @@ const Shop = () => {
                             <button className="btn btn-success capitalize text-black font-bold text-xs md:text-lg bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700" onClick={()=>setAsc(!asc)}>{asc ? 'Sort Price High to Low' : 'Sort Price Low to High'}</button>
 
                             <form onSubmit={handleSearch} className="flex">
-                            <input type="text" name="search" placeholder="Search Here" className="input input-bordered input-success w-full rounded-r-none max-w-xs bg-white" />
+                            <input type="text" name="search" placeholder="Search Here" className="input input-bordered input-success w-full rounded-r-none max-w-xs bg-white placeholder:text-xs md:placeholder:text-base" />
                             
                             <input className="btn rounded-l-none  btn-success text-black capitalize text-lg bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700" type="submit" value="search" />
                             </form>

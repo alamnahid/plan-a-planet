@@ -8,7 +8,7 @@ const HotSale = () => {
     const [product, setProduct] = useState([])
 
     useEffect(() => {
-        fetch('https://plan-a-plant-server.vercel.app/plants')
+        fetch('http://localhost:5000/plants')
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
@@ -45,11 +45,11 @@ const HotSale = () => {
                         <h1 className="text-[#343434] font-semibold mt-3  text-xs md:text-xl">{item?.name}</h1>
                         <div className="flex gap-2 items-center">
                             <h1 className="text-[#343434] md:text-xl">$ {item?.price}</h1>
-                            <h1 className="text-[#D11F1F]  md:text-xl">$ <del>{item?.price * 1.25}</del></h1>
+                            <h1 className="text-[#D11F1F]  md:text-xl"><del>${item?.price * 1.25}</del></h1>
                         </div>
 
 
-                        <Link to={`/productdetails/${item._id}`}><button className="capitalize h-8 md:h-14 w-full bg-[#3B823E] md:px-5 text-white font-semibold text-xs md:text-xl rounded-lg mt-4 hover:bg-gradient-to-r from-teal-200 to-lime-200 focus:ring-lime-200 dark:focus:ring-teal-700 hover:text-black">Shop Now</button></Link>
+                        <Link to={`/productdetails/${item._id}`}><button className="capitalize h-8 md:h-14 w-full bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-2xl text-black font-semibold">Shop Now</button></Link>
 
 
                     </div>)

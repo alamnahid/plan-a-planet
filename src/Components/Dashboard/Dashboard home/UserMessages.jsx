@@ -6,7 +6,7 @@ const UserMessages = () => {
     const [userMessage, setUserMessage] = useState([])
 
     useEffect(()=>{
-        axios.get('https://plan-a-plant-server.vercel.app/contact')
+        axios.get('http://localhost:5000/contact')
         .then(res=>setUserMessage(res.data))
     }, [])
     // console.log(userMessage)

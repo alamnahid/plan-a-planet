@@ -42,9 +42,12 @@
   background-blend-mode: overlay;
   border-radius: 20px;
 }
-.gallery:hover{
-  transform: rotate(20deg);
-}
+
+  .circle:hover {
+   box-shadow: 10px 8px 6px teal;
+   cursor: pointer;
+  }
+
 .cardss:hover{
   transform: rotate(2deg);
   transition: 1s;

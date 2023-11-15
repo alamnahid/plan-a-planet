@@ -61,7 +61,7 @@ const Review = () => {
             const cardIndex = (currentSlide + i) % totalCards;
             const { imageSrc, name, designation, description } = cardData[cardIndex];
             cards.push(
-                <div data-aos="fade-up" data-aos-delay="200" key={cardIndex} className="card hover:translate-x-[-20px] lg:w-[34.875rem] flex flex-col  justify-center h-[15rem] md:h-[21.8125rem] rounded-xl border-2 border-[#E8E8E8]">
+                <div data-aos="fade-up" data-aos-delay="200" key={cardIndex} className="card hover:translate-x-[-20px] lg:w-[34.875rem] flex flex-col  justify-center h-[15rem] md:h-[21.8125rem] rounded-xl border-2 border-[#E8E8E8] shadow-md hover:cursor-crosshair">
                     <div className="flex gap-4 ml-[3.13rem]">
                         <img className='w-[3.75rem] h-[3.75rem] rounded-[50%]' src={imageSrc} alt="" />
                         <div>

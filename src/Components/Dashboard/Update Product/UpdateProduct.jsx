@@ -19,7 +19,7 @@ const UpdateProduct = () => {
     }
 
     useEffect(()=>{
-        fetch(`https://plan-a-plant-server.vercel.app/plants?search=${search.toString()}`)
+        fetch(`http://localhost:5000/plants?search=${search.toString()}`)
         .then(res=>res.json())
         .then(data=>setShowData(data))
     }, [search])

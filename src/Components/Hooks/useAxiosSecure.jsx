@@ -6,7 +6,7 @@ import { AuthContext } from "../AuthContest/AuthProvider";
 
 
 const axiosSecure = axios.create({
-    baseURL: 'https://plan-a-plant-server.vercel.app',
+    baseURL: 'http://localhost:5000',
     withCredentials: true
 });
 

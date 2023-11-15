@@ -21,7 +21,7 @@ const AddHotSaleProduct = () => {
 
         const productInfo = { name, photo, category, producttype, price, description, rating, hotsale, previousprice }
 
-        fetch('https://plan-a-plant-server.vercel.app/plants', {
+        fetch('http://localhost:5000/plants', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
