@@ -17,7 +17,7 @@ const Invoice = () => {
       }, []);
     
 
-    const url = `http://localhost:5000/order?email=${user?.email}`
+    const url = `https://plan-a-plant-server.vercel.app/order?email=${user?.email}`
 
     useEffect(() => {
         axios.get(url, { withCredentials: true })

@@ -30,7 +30,7 @@ const Shop = () => {
 
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/plants?sort=${asc ? 'asc' : 'des'}&search=${search.toString()}`)
+        fetch(`https://plan-a-plant-server.vercel.app/plants?sort=${asc ? 'asc' : 'des'}&search=${search.toString()}`)
         .then(res=>res.json())
         .then(data=>setShowData(data))
     }, [asc, search])
@@ -78,7 +78,7 @@ const Shop = () => {
     const [itemsPerPage, setItemsPerpage] = useState(15)
 
     useEffect(() => {
-        fetch('http://localhost:5000/plantscount')
+        fetch('https://plan-a-plant-server.vercel.app/plantscount')
             .then(res => res.json())
             .then(data => setTotalCount(data))
     }, [])
@@ -111,7 +111,7 @@ const Shop = () => {
 
     // apatotot
     useEffect(() => {
-        fetch(`http://localhost:5000/plants?page=${currentPage}&size=${itemsPerPage}`)
+        fetch(`https://plan-a-plant-server.vercel.app/plants?page=${currentPage}&size=${itemsPerPage}`)
             .then(res => res.json())
             .then(data => {
                 setShowData(data)
@@ -180,7 +180,9 @@ const Shop = () => {
 
                                         <h1 className="text-[#343434] font-semibold mt-3 text-xs md:text-lg">{plant?.name}</h1>
                                         <h1 className="text-[#343434] text-xs md:text-xl">$ {plant?.price}</h1>
-                                        <Link to={`/productdetails/${plant._id}`}><button className="capitalize h-8 md:h-14 w-full bg-[#3B823E] md:px-5 text-white font-semibold text-xs md:text-xl rounded-lg mt-4 hover:bg-white hover:text-black hover:border-2 hover:border-green-800">Shop Now</button></Link>
+                                        
+
+                                        <Link to={`/productdetails/${plant._id}`}><button className="text-gray-900 mt-3 font-semibold w-full h-8 md:h-14 md:px-5 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-xl text-xs md:text-xl text-center me-2 mb-2">Shop Now</button></Link>
                                     </div>)
                                 }
 

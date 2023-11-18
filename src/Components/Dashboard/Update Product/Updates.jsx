@@ -24,7 +24,7 @@ const Updates = () => {
         const rating = e.target.rating.value;
 
         const productInfo = { name, photo, category, producttype, price, description, rating }
-        fetch(`http://localhost:5000/plants/${updateData._id}`,{
+        fetch(`https://plan-a-plant-server.vercel.app/plants/${updateData._id}`,{
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

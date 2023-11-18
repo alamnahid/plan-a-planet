@@ -39,7 +39,7 @@ const Signup = () => {
             })
 
         const userInfo = { name, email }
-        fetch('http://localhost:5000/user', {
+        fetch('https://plan-a-plant-server.vercel.app/user', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

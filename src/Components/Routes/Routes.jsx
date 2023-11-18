@@ -37,7 +37,7 @@ const router = createBrowserRouter([
         {
           path: '/shop',
           element: <Shop></Shop>,
-          // loader: ()=>fetch('http://localhost:5000/plants')
+          // loader: ()=>fetch('https://plan-a-plant-server.vercel.app/plants')
         },
         {
             path: '/about',
@@ -50,18 +50,18 @@ const router = createBrowserRouter([
         {
           path: '/productdetails/:id',
           element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-          loader: ({params}) =>fetch(`http://localhost:5000/plants/${params.id}`)
+          loader: ({params}) =>fetch(`https://plan-a-plant-server.vercel.app/plants/${params.id}`)
         },
         {
           path: '/semishop/:name',
           element: <SemiCategorieShop></SemiCategorieShop>,
-          loader: ()=>fetch('http://localhost:5000/plants')
+          loader: ()=>fetch('https://plan-a-plant-server.vercel.app/plants')
           
         },
         {
           path: '/categorieshop/:name',
           element: <CategorieShop></CategorieShop>,
-          loader: ()=>fetch('http://localhost:5000/plants')
+          loader: ()=>fetch('https://plan-a-plant-server.vercel.app/plants')
         },
         {
           path: '/login',
@@ -99,7 +99,7 @@ const router = createBrowserRouter([
           {
             path: 'dashboardhome',
             element: <DashboardHome></DashboardHome>,
-            loader: ()=>fetch('http://localhost:5000/plants')
+            loader: ()=>fetch('https://plan-a-plant-server.vercel.app/plants')
           },
           {
             path: 'hotsale',
@@ -108,17 +108,17 @@ const router = createBrowserRouter([
           {
             path: 'updateproduct',
             element: <UpdateProduct></UpdateProduct>,
-            // loader: ()=>fetch('http://localhost:5000/plants')
+            // loader: ()=>fetch('https://plan-a-plant-server.vercel.app/plants')
           },
           {
             path: 'updatesproduct/:id',
             element: <Updates></Updates>,
-            loader: ({params})=>fetch(`http://localhost:5000/plants/${params.id}`)
+            loader: ({params})=>fetch(`https://plan-a-plant-server.vercel.app/plants/${params.id}`)
           },
           {
             path: 'deleteproduct',
             element: <DeleteProduct></DeleteProduct>,
-            loader: ()=>fetch('http://localhost:5000/plants')
+            loader: ()=>fetch('https://plan-a-plant-server.vercel.app/plants')
           },
         ]
        
